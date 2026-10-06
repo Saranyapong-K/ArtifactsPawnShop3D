@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ba5geir4772kb"]
+
+[ext_resource type="PackedScene" uid="uid://31jnc2i6k2t1" path="res://assets/Shop/Shop.glb" id="1_viryw"]
+
+[node name="Shop" unique_id=613188507 instance=ExtResource("1_viryw")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

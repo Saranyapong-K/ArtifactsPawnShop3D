@@ -1,0 +1,10 @@
+res://assets/Scene/main.tscn
+res://shop.tscn
+res://assets/Scene/shop.tscn
+res://assets/Scene/player.tscn
+res://Day_manager.tscn
+res://scripts/day_manager.gd
+res://scripts/customer.gd
+res://scripts/bargain_ui.gd
+res://scripts/relic_item.gd
+res://scripts/player_hud.gd

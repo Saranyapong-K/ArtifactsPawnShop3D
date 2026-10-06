@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b3wf5ftgo4ja8"]
+
+[ext_resource type="PackedScene" uid="uid://c5r3yt8vtpltl" path="res://assets/Elf/TwinkElf.glb" id="1_3s3a4"]
+[ext_resource type="Script" uid="uid://b2yh8reqxhpx6" path="res://assets/Scene/player.gd" id="1_80ea8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x3d4q"]
+radius = 0.20703125
+height = 1.9951172
+
+[node name="Player" type="CharacterBody3D" unique_id=1560452730]
+script = ExtResource("1_80ea8")
+
+[node name="TwinkElf" parent="." unique_id=1173995422 instance=ExtResource("1_3s3a4")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.002264008, 0, 0.036369324)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=516356418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0000209, 0)
+shape = SubResource("CapsuleShape3D_x3d4q")
+
+[node name="Head" type="Node3D" parent="." unique_id=568875768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8089123, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1693650301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0210351e-07, -0.117100716, 0.20000005)

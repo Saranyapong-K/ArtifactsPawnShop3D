@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bkg76ts0s1mwi"]
+
+[ext_resource type="Script" uid="uid://ctipowxhweun4" path="res://scripts/haggle_test.gd" id="1_fyam6"]
+
+[node name="HaggleTest" type="Node" unique_id=659901340]
+script = ExtResource("1_fyam6")

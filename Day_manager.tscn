@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cf46f85rctqmn"]
+
+[ext_resource type="Script" uid="uid://c0qww0bk3yn0k" path="res://scripts/day_manager.gd" id="1_grmw6"]
+[ext_resource type="PackedScene" uid="uid://co0htmu32yc1f" path="res://npcs_1.tscn" id="2_1kyhq"]
+[ext_resource type="PackedScene" uid="uid://clx20l8wvsejv" path="res://npcs_2.tscn" id="3_yewrq"]
+[ext_resource type="PackedScene" uid="uid://cdboa5eb2pgk7" path="res://assets/Relics/Surfboard.glb" id="4_ssnni"]
+[ext_resource type="PackedScene" uid="uid://k5bf4rydrcr8" path="res://assets/Relics/Guitar.glb" id="5_w1nhx"]
+[ext_resource type="PackedScene" uid="uid://bcyb837vo4u7e" path="res://assets/Relics/Sword.glb" id="6_2sc7k"]
+[ext_resource type="PackedScene" uid="uid://ea6blxs235qv" path="res://assets/Customers/Cat.glb" id="7_ssnni"]
+[ext_resource type="Texture2D" uid="uid://dn5ia4q0qils5" path="res://assets/Awsomesuace.png" id="7_yewrq"]
+
+[node name="Node" type="Node" unique_id=1140384134]
+script = ExtResource("1_grmw6")
+customer_scenes = Array[PackedScene]([ExtResource("2_1kyhq"), ExtResource("3_yewrq")])
+relic_scenes = Array[PackedScene]([ExtResource("4_ssnni"), ExtResource("5_w1nhx"), ExtResource("6_2sc7k"), ExtResource("7_ssnni")])
+happy_texture = ExtResource("7_yewrq")

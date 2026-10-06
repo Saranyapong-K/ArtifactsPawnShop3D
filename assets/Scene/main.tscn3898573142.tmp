@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://iydg3oe0idgl"]
+
+[ext_resource type="PackedScene" uid="uid://s2ssyjffkbmp" path="res://assets/Scene/shop.tscn" id="1_mykv4"]
+[ext_resource type="PackedScene" uid="uid://b3wf5ftgo4ja8" path="res://assets/Scene/player.tscn" id="2_pwv1b"]
+[ext_resource type="PackedScene" uid="uid://cf46f85rctqmn" path="res://Day_manager.tscn" id="3_xyp3j"]
+
+[sub_resource type="Environment" id="Environment_x3d4q"]
+ambient_light_source = 2
+ambient_light_color = Color(0.3529412, 0.27058825, 0.3764706, 1)
+ambient_light_energy = 0.8
+tonemap_mode = 2
+glow_enabled = true
+glow_intensity = 0.8
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(1, 0.8117647, 0.6039216, 1)
+fog_density = 1.0
+adjustment_enabled = true
+adjustment_contrast = 1.1
+adjustment_saturation = 1.15
+
+[node name="Main" type="Node3D" unique_id=1985793294]
+
+[node name="Shop" parent="." unique_id=1894779026 instance=ExtResource("1_mykv4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09538984, -0.048514843, -0.036685467)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1202953053]
+environment = SubResource("Environment_x3d4q")
+
+[node name="Player" parent="." unique_id=1560452730 instance=ExtResource("2_pwv1b")]
+transform = Transform3D(-0.9481836, 0, -0.3177229, 0, 1, 0, 0.3177229, 0, -0.9481836, 4.948905, 0.11096847, -1.2842307)
+
+[node name="Light" type="Node3D" parent="." unique_id=1794970499]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.27434564, 0)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Light" unique_id=1474184905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.204693, 2.0295892, 4.524756)
+top_level = true
+light_color = Color(1, 0.6901961, 0.3764706, 1)
+light_energy = 1.5
+light_specular = 0.0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Light" unique_id=1945767886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.204693, 2.0295892, -0.5352478)
+top_level = true
+light_color = Color(1, 0.6901961, 0.3764706, 1)
+light_energy = 1.5
+light_specular = 0.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Light" unique_id=1156180300]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6250057, 2.0295892, -0.19665468)
+top_level = true
+light_color = Color(1, 0.6901961, 0.3764706, 1)
+light_energy = 1.5
+light_specular = 0.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Light" unique_id=2022726360]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4714471, 2.0295892, -0.3027972)
+top_level = true
+light_color = Color(1, 0.6901961, 0.3764706, 1)
+light_energy = 1.5
+light_specular = 0.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Light" unique_id=1526396152]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.309649, 2.0295892, -0.9956622)
+top_level = true
+light_color = Color(1, 0.6901961, 0.3764706, 1)
+light_energy = 1.5
+light_specular = 0.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Light" unique_id=776981974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.498208, 2.0295892, 3.988186)
+top_level = true
+light_color = Color(1, 0.6901961, 0.3764706, 1)
+light_energy = 1.5
+light_specular = 0.0
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Light" unique_id=1681355180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9201794, 2.0295892, 3.988186)
+top_level = true
+light_color = Color(1, 0.6901961, 0.3764706, 1)
+light_energy = 1.5
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Light" unique_id=971274342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.49516487, 2.0295892, 3.988186)
+top_level = true
+light_color = Color(1, 0.6901961, 0.3764706, 1)
+light_energy = 1.5
+light_specular = 0.0
+omni_range = 10.0
+
+[node name="Marks" type="Node3D" parent="." unique_id=1920493258]
+
+[node name="Door" type="Marker3D" parent="Marks" unique_id=2055614579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7244554, -0.039471388, 7.205308)
+
+[node name="ExitSpot" type="Marker3D" parent="Marks" unique_id=1934271748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7244554, -0.039471388, 8.068908)
+
+[node name="CashierSpot" type="Marker3D" parent="Marks" unique_id=701927840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9207225, -0.039471388, 1.4204373)
+
+[node name="RelicSpot" type="Marker3D" parent="Marks" unique_id=271189196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9207225, 1.2000886, 0.080984)
+
+[node name="Day_manager" parent="." unique_id=1140384134 instance=ExtResource("3_xyp3j")]
