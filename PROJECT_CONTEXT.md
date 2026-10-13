@@ -12,11 +12,22 @@ repository and publishing a gameplay URL. This supersedes earlier local-only
 restrictions for this release. Preserve artwork, accepted rules, real saves and
 unsaved editor work. No shutdown or Discord messages were requested here.
 
-- Game repository: https://github.com/Saranyapong-K/artifacts-pawn-shop, main.
+- Game repository: https://github.com/Saranyapong-K/ArtifactsPawnShop3D, main.
+  GitHub confirmed the repository was renamed; origin now uses this canonical
+  URL. Game build commit: 0bd35acfe3e5b91d69afa9e6eb9ad462f10357dc.
   Public playtest Site: appgprj_6acbec05f3488191963d85c1c35ecce8, existing public
   audience retained. URL: https://artifacts-pawn-shop-playtest-syrins.heartyokapi128.chatgpt.site/.
   Hosting checkout: chat work/sites/artifacts-pawn-shop-playtest. Site source
   repository and game GitHub repository are separate; push both exact states.
+- Publication succeeded: Site version 3, source commit
+  f50da545ed1195bb2d64f93fe45211692ce30920, deployment
+  appgdep_6aceb2143248819190430e045e52d35d. An anonymous live browser verified
+  release.json's game commit, real menu audio (peak 0.183), New Game, mouse
+  capture and Management rendering, with zero captured runtime errors. The
+  menu loaded in ~4.8 s on this machine/network. Click inside the canvas to
+  unlock audio; the first test click did not unlock it, and a canvas-centred
+  trusted click passed. Do not mistake browser gesture requirements for the
+  earlier Sample-backend silence.
 - Web silence fixed with audio/general/default_playback_type.web=0 (Stream).
   In the tested 4.7.2/Chrome setup, default Sample produced zero output despite
   playing states; Stream produces real nonzero menu, synth and radio output.
