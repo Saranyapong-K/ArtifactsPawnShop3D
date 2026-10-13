@@ -34,6 +34,12 @@ missed their narrow boards. The floor occupancy check also rejected low shelves.
   Visual model gallery inspected beside a 1.85 m customer. Private test profiles;
   evidence in chat work/furniture-grid-fix-2026-10-14. Real save/settings untouched.
   Preserve the user's current main.tscn lighting, shop and rubbish-marker edits.
+- Game commit 086a0527e2df5ab8fdf4e14a282c8f6b1645811d pushed to main.
+  Compressed production build passed Chrome startup, audio, New Game, mouse
+  capture, Management/shop rendering with no captured runtime errors.
+  Public Site version 5 published successfully: source commit
+  88fd58d5a4c31c9698156de2f3a2f652f2f44842; deployment
+  appgdep_6acec5aea4808191b61faa62695e50e6. Gameplay URL unchanged.
 
 ## Classroom showcase tuning — 2026-10-14
 
