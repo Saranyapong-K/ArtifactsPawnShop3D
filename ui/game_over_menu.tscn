@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://bdlgr4ju1oo3e"]
+
+[ext_resource type="Texture2D" uid="uid://sb5b0phvvy2w" path="res://assets/UIs/gameover.png" id="1_m16wd"]
+
+[node name="GameOverMenu" type="Control" unique_id=2111864924]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=945658853]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource("1_m16wd")
+expand_mode = 1
+
+[node name="Heading" type="Label" parent="TextureRect" unique_id=1965486210]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 0.08
+anchor_top = 0.23
+anchor_right = 0.92
+anchor_bottom = 0.33
+grow_horizontal = 2
+text = "The shop needs a fresh start."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Reason" type="Label" parent="TextureRect" unique_id=969002857]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 0.08
+anchor_top = 0.40
+anchor_right = 0.92
+anchor_bottom = 0.68
+grow_horizontal = 2
+grow_vertical = 2
+text = "you died because: monster  (yeah i hate that too)"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CheckpointHint" type="Label" parent="TextureRect" unique_id=730225083]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 0.08
+anchor_top = 0.70
+anchor_right = 0.92
+anchor_bottom = 0.82
+grow_horizontal = 2
+grow_vertical = 0
+text = "Continue from your last sleep checkpoint."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="MainMenuButton" type="Button" parent="TextureRect" unique_id=1201101616]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 0.30
+anchor_top = 0.84
+anchor_right = 0.70
+anchor_bottom = 0.95
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 17
+text = "Main menu"
+metadata/_editor_description_ = "Add your button artwork through Theme Overrides > Styles with StyleBoxTexture."

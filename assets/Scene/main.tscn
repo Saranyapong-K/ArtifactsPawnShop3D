@@ -1,28 +1,47 @@
 [gd_scene format=3 uid="uid://iydg3oe0idgl"]
 
-[ext_resource type="PackedScene" uid="uid://s2ssyjffkbmp" path="res://assets/Scene/shop.tscn" id="1_mykv4"]
+[ext_resource type="PackedScene" uid="uid://tnbxgo6k1x17" path="res://assets/Scene/shop_updated.tscn" id="1_mykv4"]
+[ext_resource type="PackedScene" uid="uid://dni16jap2duap" path="res://world.tscn" id="1_wrrei"]
 [ext_resource type="PackedScene" uid="uid://b3wf5ftgo4ja8" path="res://assets/Scene/player.tscn" id="2_pwv1b"]
 [ext_resource type="PackedScene" uid="uid://cf46f85rctqmn" path="res://Day_manager.tscn" id="3_xyp3j"]
+[ext_resource type="PackedScene" uid="uid://b0afu06mxpndd" path="res://player_ui.tscn" id="4_gb7hj"]
+[ext_resource type="PackedScene" uid="uid://cydpewcst5mrk" path="res://ui/settings_menu.tscn" id="5_settings"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_autumn"]
+sky_top_color = Color(0.45, 0.52, 0.62, 1)
+sky_horizon_color = Color(0.84, 0.73, 0.56, 1)
+sky_energy_multiplier = 0.65
+ground_bottom_color = Color(0.28, 0.21, 0.16, 1)
+ground_horizon_color = Color(0.84, 0.73, 0.56, 1)
+ground_energy_multiplier = 0.65
+
+[sub_resource type="Sky" id="Sky_autumn"]
+sky_material = SubResource("ProceduralSkyMaterial_autumn")
+radiance_size = 2
 
 [sub_resource type="Environment" id="Environment_x3d4q"]
+sky = SubResource("Sky_autumn")
 ambient_light_source = 2
-ambient_light_color = Color(0.35629335, 0.29968232, 0.4375684, 1)
-ambient_light_energy = 0.8
+ambient_light_color = Color(0.6648514, 0.6263983, 0.6442886, 1)
+ambient_light_energy = 0.65
+reflected_light_source = 2
 tonemap_mode = 2
 glow_enabled = true
 glow_intensity = 0.8
 fog_enabled = true
 fog_mode = 1
-fog_light_color = Color(1, 0.8117647, 0.6039216, 1)
-fog_density = 1.0
+fog_light_color = Color(0.84, 0.77, 0.66, 1)
+fog_density = 0.015
 adjustment_enabled = true
 adjustment_contrast = 1.1
 adjustment_saturation = 1.15
 
 [node name="Main" type="Node3D" unique_id=1985793294]
 
+[node name="World" parent="." unique_id=2089957838 instance=ExtResource("1_wrrei")]
+
 [node name="Shop" parent="." unique_id=1894779026 instance=ExtResource("1_mykv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.09538984, -0.048514843, -0.036685467)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4142778, -0.048514843, -2.0666895)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1202953053]
 environment = SubResource("Environment_x3d4q")
@@ -36,59 +55,53 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.27434564, 0)
 [node name="OmniLight3D" type="OmniLight3D" parent="Light" unique_id=1945767886]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.204693, 2.0295892, -0.5352478)
 top_level = true
-light_color = Color(1, 0.6901961, 0.3764706, 1)
-light_energy = 1.5
+light_color = Color(1, 0.86, 0.68, 1)
 light_specular = 0.0
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Light" unique_id=1156180300]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6250057, 2.0295892, -0.42706537)
 top_level = true
-light_color = Color(1, 0.6901961, 0.3764706, 1)
-light_energy = 1.5
+light_color = Color(1, 0.86, 0.68, 1)
 light_specular = 0.0
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="Light" unique_id=2022726360]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4714471, 2.0295892, -0.5008973)
 top_level = true
-light_color = Color(1, 0.6901961, 0.3764706, 1)
-light_energy = 1.5
+light_color = Color(1, 0.86, 0.68, 1)
 light_specular = 0.0
 
 [node name="OmniLight3D10" type="OmniLight3D" parent="Light" unique_id=1973666824]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9993024, 2.1243594, -0.52242947)
 top_level = true
-light_color = Color(1, 0.6901961, 0.3764706, 1)
-light_energy = 1.5
+light_color = Color(1, 0.86, 0.68, 1)
 light_specular = 0.0
 
 [node name="OmniLight3D6" type="OmniLight3D" parent="Light" unique_id=776981974]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.498208, 1.4723086, 4.043017)
 top_level = true
-light_color = Color(1, 0.6901961, 0.3764706, 1)
-light_energy = 2.3
+light_color = Color(1, 0.86, 0.68, 1)
+light_energy = 1.3
 light_specular = 0.0
 
 [node name="OmniLight3D8" type="OmniLight3D" parent="Light" unique_id=1669634033]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3892283, 1.4723086, 5.536511)
 top_level = true
-light_color = Color(1, 0.6901961, 0.3764706, 1)
-light_energy = 2.3
+light_color = Color(1, 0.86, 0.68, 1)
+light_energy = 1.3
 light_specular = 0.0
 omni_range = 15.100392
 
 [node name="OmniLight3D7" type="OmniLight3D" parent="Light" unique_id=1681355180]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5617034, 2.0295892, 0.7957239)
 top_level = true
-light_color = Color(1, 0.6901961, 0.3764706, 1)
-light_energy = 1.5
+light_color = Color(1, 0.86, 0.68, 1)
 light_specular = 0.0
 omni_range = 10.0
 
 [node name="OmniLight3D11" type="OmniLight3D" parent="Light" unique_id=162469832]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6472445, 2.0295892, 5.300818)
 top_level = true
-light_color = Color(1, 0.6901961, 0.3764706, 1)
-light_energy = 1.5
+light_color = Color(1, 0.86, 0.68, 1)
 light_specular = 0.0
 omni_range = 10.0
 
@@ -98,7 +111,7 @@ omni_range = 10.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7244554, -0.039471388, 7.205308)
 
 [node name="ExitSpot" type="Marker3D" parent="Marks" unique_id=1934271748]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7244554, -0.039471388, 8.068908)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7244554, -0.039471388, 8.650921)
 
 [node name="CashierSpot" type="Marker3D" parent="Marks" unique_id=701927840]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9207225, -0.039471388, 1.6091869)
@@ -107,9 +120,66 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9207225, -0.039471388, 1.60
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.172034, -0.039471388, 1.4079283)
 
 [node name="RelicSpot" type="Marker3D" parent="Marks" unique_id=271189196]
-transform = Transform3D(1, 0, 0, 0, 0.97520095, 0.22132136, 0, -0.22132136, 0.97520095, 3.975895, 1.1948636, 0.16005564)
+transform = Transform3D(1, 0, 0, 0, 0.97520095, 0.22132136, 0, -0.22132136, 0.97520095, 3.975895, 1.1948636, 0.54110444)
+
+[node name="ClockSpot" type="Marker3D" parent="Marks" unique_id=1967162865]
+transform = Transform3D(0.9053394, 0, -0.4246888, 0, 1, 0, 0.4246888, 0, 0.9053394, 3.1820538, 0.895676, 0.6366233)
+
+[node name="RadioSpot" type="Marker3D" parent="Marks" unique_id=1616057251]
+transform = Transform3D(0.9231323, 0, 0.3844825, 0, 1, 0, -0.3844825, 0, 0.9231323, 6.1500797, 0.895676, 0.6213732)
+
+[node name="InternetSpot" type="Marker3D" parent="Marks" unique_id=1056297265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.659482, 1.582117, 0.014431655)
+
+[node name="Dumbster spot" type="Marker3D" parent="Marks" unique_id=1458772905]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7923795, 0.5378798, -4.0822935)
+
+[node name="BroomSpot" type="Marker3D" parent="Marks" unique_id=1329258884]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.950235, 0.2136311, -2.1082544)
+
+[node name="MopSpot" type="Marker3D" parent="Marks" unique_id=1496873375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.6166935, 0.2136311, -4.56722)
+
+[node name="DusterSpot" type="Marker3D" parent="Marks" unique_id=1521930207]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.11413, 1.0543394, -4.833047)
+
+[node name="MopCleanerSpot2" type="Marker3D" parent="Marks" unique_id=1426979897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.6166935, 0.2136311, -3.4900036)
+
+[node name="trashs" type="Node3D" parent="Marks" unique_id=493478050]
+
+[node name="TrashSpot" type="Marker3D" parent="Marks/trashs" unique_id=826007127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.228042, 0, 2.1266675)
+
+[node name="TrashSpot2" type="Marker3D" parent="Marks/trashs" unique_id=96855184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.515821, 0, 5.3739805)
+
+[node name="TrashSpot3" type="Marker3D" parent="Marks/trashs" unique_id=1955876992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8703046, 0, 1.7764518)
+
+[node name="TrashDrink" type="Marker3D" parent="Marks/trashs" unique_id=27766418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8939953, 0, 3.9126954)
+
+[node name="TrashDrink2" type="Marker3D" parent="Marks/trashs" unique_id=1174730209]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7556205, 0, 3.9126954)
+
+[node name="TrashSpot4" type="Marker3D" parent="Marks/trashs" unique_id=879376830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6565504, 0, 6.4829526)
+
+[node name="TrashSpot5" type="Marker3D" parent="Marks/trashs" unique_id=612185096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.492684, 0, 0.29325104)
+
+[node name="TrashSpot6" type="Marker3D" parent="Marks/trashs" unique_id=1823157797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6141987, 0, 5.1814294)
 
 [node name="Day_manager" parent="." unique_id=1140384134 instance=ExtResource("3_xyp3j")]
 
 [node name="BargainCam" type="Camera3D" parent="." unique_id=2067626219]
 transform = Transform3D(-0.9999373, -0.011116527, -0.0013987917, -0.011154177, 0.99946827, 0.03064178, 0.0010574177, 0.030655459, -0.9995295, 3.9211688, 1.6502664, -1.1542082)
+
+[node name="PlayerUi" type="CanvasLayer" parent="." unique_id=1444188180]
+layer = 5
+
+[node name="PlayerUI" parent="PlayerUi" unique_id=981765860 instance=ExtResource("4_gb7hj")]
+
+[node name="SettingsBook" parent="." unique_id=1828385111 instance=ExtResource("5_settings")]

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cotaen3ek0813"]
+
+[ext_resource type="PackedScene" uid="uid://b4qmqxpdct2wg" path="res://assets/Customers/NPCS3.glb" id="1_ok0ff"]
+[ext_resource type="Script" uid="uid://bfjscubodnen2" path="res://scripts/customer.gd" id="2_tft84"]
+
+[node name="NPCS3" unique_id=2026912074 instance=ExtResource("1_ok0ff")]
+script = ExtResource("2_tft84")
+target_height = 1.85
+
+[node name="Skeleton3D" parent="metarig" parent_id_path=PackedInt32Array(1760646124) index="0" unique_id=678052070]
+bones/4/rotation = Quaternion(-0.042511754, -1.19101514e-07, -5.067796e-09, 0.999096)
+bones/5/rotation = Quaternion(-0.12497661, -0.00018522721, -0.003013643, 0.9921551)
+bones/7/rotation = Quaternion(-0.13486564, 0.75670207, -0.4805261, 0.4222652)
+bones/8/rotation = Quaternion(-0.013382405, -0.10078241, -0.010068941, 0.99476755)
+bones/9/rotation = Quaternion(-0.01684414, 0.021562282, -0.014217835, 0.99952453)
+bones/11/rotation = Quaternion(-0.119762056, -0.7609955, 0.47000375, 0.430859)
+bones/12/rotation = Quaternion(-0.013382377, 0.100782394, 0.010068896, 0.99476755)
+bones/14/rotation = Quaternion(0.25516528, 0.00058238074, 0.002962632, 0.9668928)
+bones/15/rotation = Quaternion(-0.116436705, 4.7341006e-11, -6.537709e-10, 0.9931982)
+bones/16/rotation = Quaternion(0.992599, 4.1065658e-09, 2.3615178e-07, 0.12143814)
+bones/17/rotation = Quaternion(0.07089743, 2.9332092e-10, 2.1030045e-08, 0.9974836)
+bones/21/rotation = Quaternion(0.992599, -2.4846559e-08, -5.022723e-10, 0.12143814)
+bones/22/rotation = Quaternion(0.07089743, 2.9332814e-10, -1.2776537e-08, 0.9974836)
+bones/25/rotation = Quaternion(3.9669246e-08, 0.97902554, -0.20373774, -8.908769e-07)

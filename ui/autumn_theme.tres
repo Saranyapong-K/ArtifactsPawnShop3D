@@ -1,0 +1,120 @@
+[gd_resource type="Theme" format=3 uid="uid://drni50yawynbe"]
+
+[ext_resource type="FontFile" uid="uid://1m1jecpeajif" path="res://assets/Fonts/Alice-Regular.ttf" id="font"]
+[ext_resource type="Texture2D" uid="uid://dpwd00mos78va" path="res://assets/UIs/greenBarUi.png" id="green"]
+[ext_resource type="Texture2D" uid="uid://b5akk070sno2s" path="res://ui/settings/slider_grip.svg" id="grip"]
+[ext_resource type="Texture2D" uid="uid://bxakc7v3rd5jm" path="res://assets/UIs/redBarUi.png" id="red"]
+[ext_resource type="Texture2D" uid="uid://bkukwysg4joku" path="res://assets/UIs/yellowBarUi.png" id="yellow"]
+
+[sub_resource type="StyleBoxTexture" id="Accept"]
+texture = ExtResource("green")
+texture_margin_left = 20.0
+texture_margin_right = 20.0
+
+[sub_resource type="StyleBoxEmpty" id="Empty"]
+
+[sub_resource type="StyleBoxFlat" id="Focus"]
+bg_color = Color(1, 0.9, 0.6, 0.08)
+border_width_bottom = 2
+border_color = Color(0.8, 0.58, 0.2, 0.9)
+
+[sub_resource type="StyleBoxFlat" id="Track"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.69, 0.53, 0.37, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="Entry"]
+content_margin_left = 8.0
+content_margin_top = 3.0
+content_margin_right = 8.0
+content_margin_bottom = 3.0
+bg_color = Color(0.69, 0.53, 0.37, 1)
+
+[sub_resource type="StyleBoxTexture" id="Offer"]
+texture = ExtResource("yellow")
+texture_margin_left = 20.0
+texture_margin_right = 20.0
+
+[sub_resource type="StyleBoxTexture" id="Reject"]
+texture = ExtResource("red")
+texture_margin_left = 20.0
+texture_margin_right = 20.0
+
+[sub_resource type="FontVariation" id="Bold"]
+base_font = ExtResource("font")
+variation_embolden = 0.45
+
+[sub_resource type="StyleBoxFlat" id="Thumb"]
+content_margin_left = 7.0
+content_margin_right = 7.0
+bg_color = Color(0.54, 0.28, 0.16, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="ScrollTrack"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color(0.64, 0.34, 0.19, 0.1)
+
+[resource]
+default_font = SubResource("Bold")
+default_font_size = 22
+Accept/base_type = &"Button"
+Accept/colors/font_outline_color = Color(0.05, 0.02, 0.01, 1)
+Accept/font_sizes/font_size = 25
+Accept/styles/disabled = SubResource("Accept")
+Accept/styles/hover = SubResource("Accept")
+Accept/styles/normal = SubResource("Accept")
+Accept/styles/pressed = SubResource("Accept")
+Button/colors/font_color = Color(1, 0.97, 0.9, 1)
+Button/colors/font_disabled_color = Color(0.7, 0.6, 0.45, 0.6)
+Button/colors/font_hover_color = Color(1, 0.88, 0.6, 1)
+Button/colors/font_outline_color = Color(0.3, 0.15, 0.07, 1)
+Button/constants/outline_size = 4
+Button/styles/disabled = SubResource("Empty")
+Button/styles/focus = SubResource("Focus")
+Button/styles/hover = SubResource("Empty")
+Button/styles/normal = SubResource("Empty")
+Button/styles/pressed = SubResource("Empty")
+HSlider/icons/grabber = ExtResource("grip")
+HSlider/icons/grabber_highlight = ExtResource("grip")
+HSlider/styles/grabber_area = SubResource("Track")
+HSlider/styles/grabber_area_highlight = SubResource("Track")
+HSlider/styles/slider = SubResource("Track")
+Label/colors/font_color = Color(1, 0.97, 0.9, 1)
+Label/colors/font_outline_color = Color(0.3, 0.15, 0.07, 1)
+Label/constants/outline_size = 4
+LineEdit/colors/font_color = Color(1, 0.97, 0.9, 1)
+LineEdit/colors/font_outline_color = Color(0.3, 0.15, 0.07, 1)
+LineEdit/constants/outline_size = 4
+LineEdit/styles/focus = SubResource("Entry")
+LineEdit/styles/normal = SubResource("Entry")
+Offer/base_type = &"Button"
+Offer/colors/font_outline_color = Color(0.05, 0.02, 0.01, 1)
+Offer/font_sizes/font_size = 25
+Offer/styles/disabled = SubResource("Offer")
+Offer/styles/hover = SubResource("Offer")
+Offer/styles/normal = SubResource("Offer")
+Offer/styles/pressed = SubResource("Offer")
+Reject/base_type = &"Button"
+Reject/colors/font_outline_color = Color(0.05, 0.02, 0.01, 1)
+Reject/font_sizes/font_size = 25
+Reject/styles/disabled = SubResource("Reject")
+Reject/styles/hover = SubResource("Reject")
+Reject/styles/normal = SubResource("Reject")
+Reject/styles/pressed = SubResource("Reject")
+RichTextLabel/colors/font_color = Color(1, 0.97, 0.9, 1)
+RichTextLabel/colors/font_outline_color = Color(0.3, 0.15, 0.07, 1)
+RichTextLabel/constants/outline_size = 4
+RichTextLabel/fonts/bold_font = SubResource("Bold")
+RichTextLabel/fonts/normal_font = SubResource("Bold")
+VScrollBar/styles/grabber = SubResource("Thumb")
+VScrollBar/styles/grabber_highlight = SubResource("Thumb")
+VScrollBar/styles/grabber_pressed = SubResource("Thumb")
+VScrollBar/styles/scroll = SubResource("ScrollTrack")

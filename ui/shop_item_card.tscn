@@ -1,0 +1,101 @@
+[gd_scene format=3]
+
+[ext_resource type="FontFile" path="res://assets/Fonts/Alice-Regular.ttf" id="font"]
+[ext_resource type="Texture2D" path="res://assets/UIs/buttonBuyShop.png" id="buy"]
+[ext_resource type="Texture2D" path="res://assets/UIs/iconFurnitureUi.png" id="furniture"]
+
+[sub_resource type="StyleBoxFlat" id="Card"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.07, 0.06, 0.04, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_left = 5
+corner_radius_bottom_right = 5
+
+[sub_resource type="StyleBoxTexture" id="Buy"]
+texture = ExtResource("buy")
+
+[node name="ShopItemCard" type="Panel"]
+custom_minimum_size = Vector2(176, 206)
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("Card")
+
+[node name="ItemIcon" type="TextureRect" parent="."]
+layout_mode = 1
+anchor_left = 0.1
+anchor_top = 0.04
+anchor_right = 0.9
+anchor_bottom = 0.57
+mouse_filter = 2
+texture = ExtResource("furniture")
+expand_mode = 1
+stretch_mode = 0
+unique_name_in_owner = true
+stretch_mode = 5
+
+[node name="ItemName" type="Label" parent="."]
+layout_mode = 1
+anchor_left = 0.045
+anchor_top = 0.58
+anchor_right = 0.955
+anchor_bottom = 0.7
+mouse_filter = 2
+text = "Furniture"
+theme_override_font_sizes/font_size = 16
+unique_name_in_owner = true
+horizontal_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.03, 0.025, 0.02, 1)
+theme_override_constants/outline_size = 0
+
+[node name="Description" type="Label" parent="."]
+layout_mode = 1
+anchor_left = 0.04
+anchor_top = 0.715
+anchor_right = 0.96
+anchor_bottom = 0.8
+mouse_filter = 2
+text = "3 × 1 floor cells"
+theme_override_font_sizes/font_size = 13
+unique_name_in_owner = true
+horizontal_alignment = 1
+autowrap_mode = 3
+theme_override_colors/font_color = Color(0.03, 0.025, 0.02, 1)
+theme_override_constants/outline_size = 0
+
+[node name="Price" type="Label" parent="."]
+layout_mode = 1
+anchor_left = 0.06
+anchor_top = 0.835
+anchor_right = 0.51
+anchor_bottom = 0.97
+mouse_filter = 2
+text = "200 G"
+theme_override_font_sizes/font_size = 20
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(1, 0.45, 0.17, 1)
+theme_override_constants/outline_size = 0
+
+[node name="BuyButton" type="Button" parent="."]
+layout_mode = 1
+anchor_left = 0.56
+anchor_top = 0.835
+anchor_right = 0.94
+anchor_bottom = 0.965
+text = ""
+mouse_default_cursor_shape = 2
+unique_name_in_owner = true
+tooltip_text = "Buy this item"
+theme_override_font_sizes/font_size = 17
+theme_override_colors/font_color = Color(1,1,1,1)
+theme_override_colors/font_disabled_color = Color(1,1,1,0.9)
+theme_override_constants/outline_size = 0
+theme_override_styles/normal = SubResource("Buy")
+theme_override_styles/hover = SubResource("Buy")
+theme_override_styles/pressed = SubResource("Buy")
+theme_override_styles/disabled = SubResource("Buy")
+

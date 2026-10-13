@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://bi7k0avaocyg"]
+
+[ext_resource type="Texture2D" uid="uid://uqjox617rmtx" path="res://assets/UIs/buttonBackUi.png" id="back"]
+[ext_resource type="PackedScene" uid="uid://cmc4686ahl42x" path="res://ui/bargain_menu.tscn" id="BargainMenu"]
+[ext_resource type="PackedScene" uid="uid://snmuux5lmqsr" path="res://ui/day_summary_menu.tscn" id="DaySummaryMenu"]
+[ext_resource type="PackedScene" uid="uid://cklc1l5qcpmbx" path="res://ui/dialogue_menu.tscn" id="DialogueMenu"]
+[ext_resource type="Texture2D" uid="uid://b7ntp0hcfe1o0" path="res://assets/UIs/bargainFlagUi.png" id="flag"]
+[ext_resource type="PackedScene" path="res://ui/price_editor_menu.tscn" id="PriceEditorMenu"]
+[ext_resource type="PackedScene" path="res://ui/receipt_menu.tscn" id="ReceiptMenu"]
+[ext_resource type="Script" uid="uid://cwjnkypf02jrn" path="res://scripts/bargain_ui.gd" id="script"]
+[ext_resource type="Theme" uid="uid://drni50yawynbe" path="res://ui/autumn_theme.tres" id="theme"]
+
+[node name="BargainInterface" type="CanvasLayer" unique_id=2012182058]
+layer = 10
+script = ExtResource("script")
+
+[node name="Screen" type="Control" parent="." unique_id=775028926]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("theme")
+
+[node name="BargainMenu" parent="Screen" unique_id=1795445346 instance=ExtResource("BargainMenu")]
+layout_mode = 1
+theme = null
+
+[node name="DialogueMenu" parent="Screen" unique_id=523261976 instance=ExtResource("DialogueMenu")]
+visible = false
+layout_mode = 1
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ReceiptMenu" parent="Screen" unique_id=730299764 instance=ExtResource("ReceiptMenu")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DaySummaryMenu" parent="Screen" unique_id=2113394379 instance=ExtResource("DaySummaryMenu")]
+visible = false
+layout_mode = 1
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PriceEditorMenu" parent="Screen" unique_id=383997854 instance=ExtResource("PriceEditorMenu")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BargainFlag" type="TextureRect" parent="Screen" unique_id=1175182772]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 395.00006
+offset_top = -68.0
+offset_right = 455.0
+offset_bottom = 35.0
+grow_horizontal = 2
+scale = Vector2(1.2594192, 1.2594192)
+mouse_filter = 2
+texture = ExtResource("flag")
+expand_mode = 1
+
+[node name="TogglePanelButton" type="Button" parent="Screen" unique_id=488437006]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -29.0
+offset_top = 287.0
+offset_right = 29.0
+offset_bottom = 345.0
+grow_horizontal = 2
+tooltip_text = ""
+mouse_default_cursor_shape = 2
+
+[node name="ToggleHint" type="Label" parent="Screen"]
+visible = false
+layout_mode = 0
+offset_right = 180.0
+offset_bottom = 24.0
+mouse_filter = 2
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 16
+text = "Tab · Hide panel"
+vertical_alignment = 1
+
+[node name="ArrowArtwork" type="TextureRect" parent="Screen/TogglePanelButton" unique_id=248468184]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(22, 22)
+mouse_filter = 2
+texture = ExtResource("back")
+expand_mode = 1

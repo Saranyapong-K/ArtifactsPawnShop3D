@@ -6,11 +6,23 @@
 [ext_resource type="PackedScene" uid="uid://cdboa5eb2pgk7" path="res://assets/Relics/Surfboard.glb" id="4_ssnni"]
 [ext_resource type="PackedScene" uid="uid://k5bf4rydrcr8" path="res://assets/Relics/Guitar.glb" id="5_w1nhx"]
 [ext_resource type="PackedScene" uid="uid://bcyb837vo4u7e" path="res://assets/Relics/Sword.glb" id="6_2sc7k"]
-[ext_resource type="PackedScene" uid="uid://ea6blxs235qv" path="res://assets/Customers/Cat.glb" id="7_ssnni"]
 [ext_resource type="Texture2D" uid="uid://dn5ia4q0qils5" path="res://assets/Awsomesuace.png" id="7_yewrq"]
+[ext_resource type="PackedScene" uid="uid://cotaen3ek0813" path="res://npcs_3.tscn" id="8_third"]
+[ext_resource type="PackedScene" path="res://scenes/goblin_police_customer.tscn" id="10_goblin_police"]
+[ext_resource type="PackedScene" uid="uid://cur1ceopl27n" path="res://assets/Customers/Goblin.glb" id="11_demon_model"]
+[ext_resource type="PackedScene" uid="uid://d3sllvfl1pymk" path="res://assets/Customers/GoblinPolice.glb" id="12_police_model"]
+[ext_resource type="AudioStream" uid="uid://cncaammj5w2d6" path="res://assets/Song/[Current song playing] EV Echo - 2 AM.mp3" id="song_0"]
+[ext_resource type="AudioStream" uid="uid://det61gvjsrpyy" path="res://assets/Song/[Current song playing] hazel - In Dreamland.mp3" id="song_1"]
+[ext_resource type="AudioStream" uid="uid://c347o2veilfmb" path="res://assets/Song/[Current song playing] kith - little break.mp3" id="song_2"]
+[ext_resource type="AudioStream" uid="uid://do2vb3dqjf0y7" path="res://assets/Song/[Current song playing] 80sFlav - On The Top.mp3" id="song_3"]
+[ext_resource type="AudioStream" uid="uid://bqiopaebxgf40" path="res://assets/Song/[Current song playing] hazel - SweetSyrups.mp3" id="song_4"]
+[ext_resource type="AudioStream" uid="uid://bph1kluf4k6tu" path="res://assets/Song/[Current song playing] slvx  - Taiyaki .mp3" id="song_5"]
 
 [node name="Node" type="Node" unique_id=1140384134]
 script = ExtResource("1_grmw6")
-customer_scenes = Array[PackedScene]([ExtResource("2_1kyhq"), ExtResource("3_yewrq")])
-relic_scenes = Array[PackedScene]([ExtResource("4_ssnni"), ExtResource("5_w1nhx"), ExtResource("6_2sc7k"), ExtResource("7_ssnni")])
+customer_scenes = Array[PackedScene]([ExtResource("2_1kyhq"), ExtResource("3_yewrq"), ExtResource("8_third"), ExtResource("10_goblin_police")])
+radio_songs = Array[AudioStream]([ExtResource("song_0"), ExtResource("song_1"), ExtResource("song_2"), ExtResource("song_3"), ExtResource("song_4"), ExtResource("song_5")])
+relic_scenes = Array[PackedScene]([ExtResource("4_ssnni"), ExtResource("5_w1nhx"), ExtResource("6_2sc7k")])
 happy_texture = ExtResource("7_yewrq")
+demon_model = ExtResource("11_demon_model")
+police_model = ExtResource("12_police_model")

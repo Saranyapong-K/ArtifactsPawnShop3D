@@ -1,0 +1,363 @@
+[
+  {
+    "id": "gold_coin",
+    "name": "Gold Coin",
+    "model_path": "res://assets/Relics/Goldcoin.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "sword_original",
+    "name": "Sword",
+    "model_path": "res://assets/Relics/Sword.glb",
+    "grid_size": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": "guitar",
+    "name": "Guitar",
+    "model_path": "res://assets/Relics/Guitar.glb",
+    "grid_size": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "surfboard",
+    "name": "Surfboard",
+    "model_path": "res://assets/Relics/Surfboard.glb",
+    "grid_size": [
+      1,
+      3
+    ]
+  },
+  {
+    "id": "artifact_staff",
+    "name": "Wizard Staff",
+    "model_path": "res://assets/Relics/Expanded/artifact_staff.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "artifact_amulet",
+    "name": "Ancient Amulet",
+    "model_path": "res://assets/Relics/Expanded/artifact_amulet.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "artifact_crystal_ball",
+    "name": "Crystal Ball",
+    "model_path": "res://assets/Relics/Expanded/artifact_crystal_ball.glb",
+    "grid_size": [
+      2,
+      2
+    ]
+  },
+  {
+    "id": "artifact_scroll",
+    "name": "Sealed Scroll",
+    "model_path": "res://assets/Relics/Expanded/artifact_scroll.glb",
+    "grid_size": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "artifact_spellbook",
+    "name": "Spellbook",
+    "model_path": "res://assets/Relics/Expanded/artifact_spellbook.glb",
+    "grid_size": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "artifact_goblet",
+    "name": "Goblet",
+    "model_path": "res://assets/Relics/Expanded/artifact_goblet.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "artifact_ring",
+    "name": "Signet Ring",
+    "model_path": "res://assets/Relics/Expanded/artifact_ring.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "artifact_crown",
+    "name": "Crown",
+    "model_path": "res://assets/Relics/Expanded/artifact_crown.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "artifact_potion",
+    "name": "Potion",
+    "model_path": "res://assets/Relics/Expanded/artifact_potion.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "artifact_sword",
+    "name": "Broad Sword",
+    "model_path": "res://assets/Relics/Expanded/artifact_sword.glb",
+    "grid_size": [
+      3,
+      1
+    ]
+  },
+  {
+    "id": "long_warhammer",
+    "name": "Warhammer",
+    "model_path": "res://assets/Relics/Expanded/long_warhammer.glb",
+    "grid_size": [
+      3,
+      1
+    ]
+  },
+  {
+    "id": "long_bow",
+    "name": "Bow",
+    "model_path": "res://assets/Relics/Expanded/long_bow.glb",
+    "grid_size": [
+      3,
+      1
+    ]
+  },
+  {
+    "id": "long_spear",
+    "name": "Spear",
+    "model_path": "res://assets/Relics/Expanded/long_spear.glb",
+    "grid_size": [
+      3,
+      1
+    ]
+  },
+  {
+    "id": "long_axe",
+    "name": "Battle Axe",
+    "model_path": "res://assets/Relics/Expanded/long_axe.glb",
+    "grid_size": [
+      3,
+      1
+    ]
+  },
+  {
+    "id": "std_mirror",
+    "name": "Antique Mirror",
+    "model_path": "res://assets/Relics/Expanded/std_mirror.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "std_candelabra",
+    "name": "Candelabra",
+    "model_path": "res://assets/Relics/Expanded/std_candelabra.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "std_rune_tablet",
+    "name": "Rune Tablet",
+    "model_path": "res://assets/Relics/Expanded/std_rune_tablet.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "std_idol",
+    "name": "Stone Idol",
+    "model_path": "res://assets/Relics/Expanded/std_idol.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "std_cauldron",
+    "name": "Cauldron",
+    "model_path": "res://assets/Relics/Expanded/std_cauldron.glb",
+    "grid_size": [
+      3,
+      3
+    ]
+  },
+  {
+    "id": "std_hourglass",
+    "name": "Hourglass",
+    "model_path": "res://assets/Relics/Expanded/std_hourglass.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "std_skull",
+    "name": "Skull",
+    "model_path": "res://assets/Relics/Expanded/std_skull.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "std_lantern",
+    "name": "Lantern",
+    "model_path": "res://assets/Relics/Expanded/std_lantern.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "std_shield",
+    "name": "Shield",
+    "model_path": "res://assets/Relics/Expanded/std_shield.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "std_helmet",
+    "name": "Helmet",
+    "model_path": "res://assets/Relics/Expanded/std_helmet.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "std_chest",
+    "name": "Treasure Chest",
+    "model_path": "res://assets/Relics/Expanded/std_chest.glb",
+    "grid_size": [
+      2,
+      2
+    ]
+  },
+  {
+    "id": "long_morning_star",
+    "name": "Morning Star",
+    "model_path": "res://assets/Relics/Expanded/long_morning_star.glb",
+    "grid_size": [
+      3,
+      1
+    ]
+  },
+  {
+    "id": "long_wizard_staff",
+    "name": "Long Wizard Staff",
+    "model_path": "res://assets/Relics/Expanded/long_wizard_staff.glb",
+    "grid_size": [
+      3,
+      1
+    ]
+  },
+  {
+    "id": "long_longsword",
+    "name": "Longsword",
+    "model_path": "res://assets/Relics/Sword.glb",
+    "grid_size": [
+      3,
+      1
+    ]
+  },
+  {
+    "id": "std_potion_tray",
+    "name": "Potion Tray",
+    "model_path": "res://assets/Relics/Expanded/std_potion_tray.glb",
+    "grid_size": [
+      2,
+      2
+    ]
+  },
+  {
+    "id": "std_plague_mask",
+    "name": "Plague Mask",
+    "model_path": "res://assets/Relics/Expanded/std_plague_mask.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "std_geode",
+    "name": "Geode",
+    "model_path": "res://assets/Relics/Expanded/std_geode.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "std_lute",
+    "name": "Lute",
+    "model_path": "res://assets/Relics/Guitar.glb",
+    "grid_size": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "std_anvil",
+    "name": "Anvil",
+    "model_path": "res://assets/Relics/Expanded/std_anvil.glb",
+    "grid_size": [
+      2,
+      2
+    ]
+  },
+  {
+    "id": "std_dragon_egg",
+    "name": "Myth Egg",
+    "model_path": "res://assets/Relics/Expanded/std_dragon_egg.glb",
+    "grid_size": [
+      1,
+      1
+    ]
+  },
+  {
+    "id": "std_royal_crown",
+    "name": "Royal Crown",
+    "model_path": "res://assets/Relics/Expanded/std_royal_crown.glb",
+    "grid_size": [
+      2,
+      2
+    ]
+  },
+  {
+    "id": "ip17",
+    "name": "IP17",
+    "model_path": "res://assets/Relics/Iphone.glb",
+    "grid_size": [
+      1,
+      2
+    ],
+    "rarity": "Rare"
+  }
+]

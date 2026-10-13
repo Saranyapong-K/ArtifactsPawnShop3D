@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://bmwa2ko0y410p"]
+
+[ext_resource type="Texture2D" uid="uid://nhe0dvh1sccl" path="res://assets/UIs/BookUi.png" id="book"]
+[ext_resource type="PackedScene" path="res://ui/stock_row.tscn" id="row"]
+[ext_resource type="Theme" uid="uid://drni50yawynbe" path="res://ui/autumn_theme.tres" id="theme"]
+[ext_resource type="Script" path="res://ui/rating_stars.gd" id="stars"]
+
+[node name="StockMenu" type="Control" unique_id=55092194]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("theme")
+
+[node name="BookArtwork" type="TextureRect" parent="." unique_id=948474936]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("book")
+expand_mode = 1
+
+[node name="Heading" type="Label" parent="." unique_id=2110002861]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.078
+anchor_top = 0.092
+anchor_right = 0.51
+anchor_bottom = 0.17
+theme_override_font_sizes/font_size = 35
+text = "Shop Management"
+
+[node name="RatingStars" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 0.52
+anchor_top = 0.092
+anchor_right = 0.92
+anchor_bottom = 0.17
+mouse_filter = 2
+script = ExtResource("stars")
+
+[node name="Wallet" type="Label" parent="." unique_id=1423043783]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.078
+anchor_top = 0.175
+anchor_right = 0.9
+anchor_bottom = 0.21
+theme_override_font_sizes/font_size = 15
+text = "Day 1 · Wallet 200 G"
+
+[node name="CleanlinessRating" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 0.095
+anchor_top = 0.212
+anchor_right = 0.92
+anchor_bottom = 0.245
+mouse_filter = 2
+theme_override_font_sizes/font_size = 16
+text = "Cleanliness: 3/6 · Better offers +3%"
+
+[node name="Scroll" type="ScrollContainer" parent="." unique_id=90788650]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.095
+anchor_top = 0.245
+anchor_right = 0.92
+anchor_bottom = 0.795
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="Rows" type="VBoxContainer" parent="Scroll" unique_id=1436826164]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="EditorSampleArtifactRow" parent="Scroll/Rows" unique_id=757350389 instance=ExtResource("row")]
+layout_mode = 2
+
+[node name="EmptyStock" type="Label" parent="." unique_id=1580674915]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.25
+anchor_right = 0.9
+anchor_bottom = 0.36
+theme_override_font_sizes/font_size = 22
+text = "No artifacts yet. Speak to a seller at the counter."
+autowrap_mode = 3
+
+[node name="PayRentButton" type="Button" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchor_left = 0.64
+anchor_top = 0.80
+anchor_right = 0.91
+anchor_bottom = 0.86
+mouse_default_cursor_shape = 2
+text = "Pay rent · 800 G"
+
+[node name="RadioControls" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+anchor_left = 0.095
+anchor_top = 0.80
+anchor_right = 0.60
+anchor_bottom = 0.86
+theme_override_constants/separation = 6
+[node name="RadioLabel" type="Label" parent="RadioControls"]
+text = "Radio"
+theme_override_font_sizes/font_size = 15
+[node name="PlayRadio" type="Button" parent="RadioControls"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+text = "Play"
+theme_override_font_sizes/font_size = 15
+[node name="PauseRadio" type="Button" parent="RadioControls"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+text = "Pause"
+theme_override_font_sizes/font_size = 15
+[node name="StopRadio" type="Button" parent="RadioControls"]
+unique_name_in_owner = true
+size_flags_horizontal = 3
+text = "Stop"
+theme_override_font_sizes/font_size = 15
+[node name="RadioStatus" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+anchor_left = 0.095
+anchor_top = 0.765
+anchor_right = 0.90
+anchor_bottom = 0.795
+theme_override_font_sizes/font_size = 14
+text = "Radio stopped"
+text_overrun_behavior = 3

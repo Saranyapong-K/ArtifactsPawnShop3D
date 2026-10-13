@@ -1,0 +1,93 @@
+[gd_resource type="Theme" format=3 uid="uid://b2k3w4vhxu2i5"]
+
+[ext_resource type="Texture2D" uid="uid://b5akk070sno2s" path="res://ui/settings/slider_grip.svg" id="1_grip"]
+[ext_resource type="Texture2D" uid="uid://b0kkgto280hej" path="res://ui/settings/slider_grip_hover.svg" id="2_hover"]
+[ext_resource type="Texture2D" uid="uid://bnxkwmjg2gmhy" path="res://ui/settings/unchecked.svg" id="3_unchecked"]
+[ext_resource type="Texture2D" uid="uid://bfggjj00p7xqf" path="res://ui/settings/checked.svg" id="4_checked"]
+[ext_resource type="Texture2D" uid="uid://cdtsl4y23lyoj" path="res://ui/settings/dropdown_arrow.svg" id="5_arrow"]
+[ext_resource type="FontFile" uid="uid://1m1jecpeajif" path="res://assets/Fonts/Alice-Regular.ttf" id="6_font"]
+
+[sub_resource type="StyleBoxFlat" id="Focus"]
+bg_color = Color(1, 0.9, 0.65, 0.05)
+border_width_bottom = 2
+border_color = Color(0.65, 0.43, 0.22, 0.65)
+
+[sub_resource type="StyleBoxEmpty" id="Empty"]
+
+[sub_resource type="StyleBoxFlat" id="Track"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.69, 0.53, 0.37, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="Dropdown"]
+content_margin_left = 12.0
+content_margin_top = 3.0
+content_margin_right = 10.0
+content_margin_bottom = 3.0
+bg_color = Color(0.69, 0.53, 0.37, 1)
+
+[sub_resource type="StyleBoxFlat" id="PopupPaper"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.96, 0.85, 0.66, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.69, 0.53, 0.37, 1)
+
+[sub_resource type="FontVariation" id="BookFont"]
+base_font = ExtResource("6_font")
+variation_embolden = 0.5
+
+[resource]
+default_font = SubResource("BookFont")
+default_font_size = 24
+Button/colors/font_color = Color(1, 0.97, 0.9, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(0.04, 0.025, 0.015, 1)
+Button/colors/font_pressed_color = Color(0.96, 0.8, 0.53, 1)
+Button/constants/outline_size = 4
+Button/styles/focus = SubResource("Focus")
+Button/styles/hover = SubResource("Empty")
+Button/styles/normal = SubResource("Empty")
+Button/styles/pressed = SubResource("Empty")
+CheckBox/constants/check_v_offset = 0
+CheckBox/icons/checked = ExtResource("4_checked")
+CheckBox/icons/checked_disabled = ExtResource("4_checked")
+CheckBox/icons/unchecked = ExtResource("3_unchecked")
+CheckBox/icons/unchecked_disabled = ExtResource("3_unchecked")
+CheckBox/styles/focus = SubResource("Focus")
+CheckBox/styles/hover = SubResource("Empty")
+CheckBox/styles/normal = SubResource("Empty")
+CheckBox/styles/pressed = SubResource("Empty")
+HSlider/icons/grabber = ExtResource("1_grip")
+HSlider/icons/grabber_disabled = ExtResource("1_grip")
+HSlider/icons/grabber_highlight = ExtResource("2_hover")
+HSlider/styles/focus = SubResource("Focus")
+HSlider/styles/grabber_area = SubResource("Track")
+HSlider/styles/grabber_area_highlight = SubResource("Track")
+HSlider/styles/slider = SubResource("Track")
+Label/colors/font_color = Color(1, 0.97, 0.9, 1)
+Label/colors/font_outline_color = Color(0.04, 0.025, 0.015, 1)
+Label/constants/outline_size = 4
+OptionButton/colors/font_color = Color(1, 0.97, 0.9, 1)
+OptionButton/constants/arrow_margin = 8
+OptionButton/constants/outline_size = 0
+OptionButton/icons/arrow = ExtResource("5_arrow")
+OptionButton/styles/focus = SubResource("Focus")
+OptionButton/styles/hover = SubResource("Dropdown")
+OptionButton/styles/normal = SubResource("Dropdown")
+OptionButton/styles/pressed = SubResource("Dropdown")
+PopupMenu/colors/font_color = Color(0.25, 0.1, 0.02, 1)
+PopupMenu/colors/font_hover_color = Color(1, 0.97, 0.9, 1)
+PopupMenu/constants/outline_size = 0
+PopupMenu/font_sizes/font_size = 21
+PopupMenu/styles/hover = SubResource("Dropdown")
+PopupMenu/styles/panel = SubResource("PopupPaper")

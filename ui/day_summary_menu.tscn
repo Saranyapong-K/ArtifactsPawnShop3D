@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://snmuux5lmqsr"]
+
+[ext_resource type="PackedScene" path="res://ui/receipt_menu.tscn" id="1_result"]
+
+[node name="DaySummaryMenu" unique_id=1799597254 instance=ExtResource("1_result")]
+anchors_preset = 15
+
+[node name="BackgroundArtwork" parent="." index="0"]
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultHeading" parent="Center/ResultContent" parent_id_path=PackedInt32Array(655547904) index="0" unique_id=2049955785]
+text = "DAY 1 COMPLETE"
+
+[node name="ResultDetails" parent="Center/ResultContent" parent_id_path=PackedInt32Array(655547904) index="2" unique_id=1630189147]
+text = "Today's profit !"
+
+[node name="NextButton" parent="Center/ResultContent" parent_id_path=PackedInt32Array(655547904) index="3" unique_id=50281782]
+text = "Sleep & start next day"

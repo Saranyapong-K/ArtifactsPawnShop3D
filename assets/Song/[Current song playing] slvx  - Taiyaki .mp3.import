@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bph1kluf4k6tu"
+path="res://.godot/imported/[Current song playing] slvx  - Taiyaki .mp3-5d41096af721ebcca037e083617064fb.mp3str"
+
+[deps]
+
+source_file="res://assets/Song/[Current song playing] slvx  - Taiyaki .mp3"
+dest_files=["res://.godot/imported/[Current song playing] slvx  - Taiyaki .mp3-5d41096af721ebcca037e083617064fb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

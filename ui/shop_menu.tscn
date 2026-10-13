@@ -1,0 +1,525 @@
+[gd_scene format=3 uid="uid://dql4kdyxv414f"]
+
+[ext_resource type="PackedScene" path="res://ui/shop_item_card.tscn" id="card"]
+[ext_resource type="Texture2D" uid="uid://blre3fxptq1ju" path="res://assets/UIs/iconClockUi.png" id="icon_Clock"]
+[ext_resource type="Texture2D" uid="uid://ceh8hnmr7pbq2" path="res://assets/UIs/iconCurseDetectorUi.png" id="icon_CurseDetector"]
+[ext_resource type="Texture2D" uid="uid://spl01p8uen0r" path="res://assets/UIs/iconMagnifyingGlassesUi.png" id="icon_Magnifier"]
+[ext_resource type="Texture2D" uid="uid://clc2j7dl0e1pl" path="res://assets/UIs/iconRadioUi.png" id="icon_Radio"]
+[ext_resource type="Theme" uid="uid://cxjbp36n2g5yl" path="res://ui/shop_theme.tres" id="theme"]
+[ext_resource type="Texture2D" uid="uid://b35xbbf0pr8k7" path="res://assets/UIs/wallpaperui.jpg" id="wallpaper"]
+
+[ext_resource type="Texture2D" path="res://assets/UIs/previews/furn_shelf.res" id="preview_DisplayShelf"]
+[ext_resource type="Texture2D" path="res://assets/UIs/previews/cab_open_shelf.res" id="preview_OpenShelf"]
+[ext_resource type="Texture2D" path="res://assets/UIs/previews/cab_counter_glass.res" id="preview_GlassCounter"]
+[ext_resource type="Texture2D" path="res://assets/UIs/previews/cab_weapon_rack.res" id="preview_WeaponRack"]
+[ext_resource type="Texture2D" path="res://assets/UIs/previews/furn_glass_cabinet.res" id="preview_GlassCabinet"]
+[ext_resource type="Texture2D" path="res://assets/UIs/previews/cab_tall_vitrine.res" id="preview_TallVitrine"]
+[ext_resource type="Texture2D" path="res://assets/UIs/previews/cab_combo.res" id="preview_CombinationCabinet"]
+[ext_resource type="Texture2D" path="res://assets/UIs/previews/cab_pedestal_dome.res" id="preview_Pedestal"]
+[ext_resource type="Texture2D" path="res://assets/UIs/previews/roomba.res" id="preview_Roomba"]
+
+[sub_resource type="StyleBoxEmpty" id="Empty"]
+
+[node name="ShopMenu" type="Control" unique_id=1486926716]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("theme")
+
+[node name="BrowserArtwork" type="TextureRect" parent="." unique_id=1808678030]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("wallpaper")
+expand_mode = 1
+
+[node name="Wallet" type="Label" parent="." unique_id=686617090]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.885
+anchor_top = 0.09
+anchor_right = 0.951
+anchor_bottom = 0.153
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 21
+text = "200 G"
+horizontal_alignment = 1
+
+[node name="SearchField" type="LineEdit" parent="." unique_id=1831107234]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.271
+anchor_top = 0.094
+anchor_right = 0.84
+anchor_bottom = 0.145
+theme_override_colors/font_color = Color(0.12, 0.08, 0.04, 1)
+theme_override_colors/font_placeholder_color = Color(0.5, 0.35, 0.2, 0.6)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("Empty")
+theme_override_styles/focus = SubResource("Empty")
+placeholder_text = "Search items and furniture"
+
+[node name="Scroll" type="ScrollContainer" parent="." unique_id=1970651]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.106
+anchor_top = 0.183
+anchor_right = 0.944
+anchor_bottom = 0.88
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="Catalog" type="VBoxContainer" parent="Scroll" unique_id=810594868]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 14
+
+[node name="EquipmentHeading" type="Label" parent="Scroll/Catalog" unique_id=1700472193]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.45, 0.17, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 30
+text = "Item"
+
+[node name="Equipment" type="GridContainer" parent="Scroll/Catalog" unique_id=1354468497]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 14
+columns = 4
+
+[node name="Magnifier" parent="Scroll/Catalog/Equipment" unique_id=1627206918 instance=ExtResource("card")]
+layout_mode = 2
+
+[node name="ItemIcon" parent="Scroll/Catalog/Equipment/Magnifier" index="0"]
+anchors_preset = -1
+texture = ExtResource("icon_Magnifier")
+stretch_mode = 5
+
+[node name="ItemName" parent="Scroll/Catalog/Equipment/Magnifier" index="1"]
+anchors_preset = -1
+text = "Magnifying glass"
+
+[node name="Description" parent="Scroll/Catalog/Equipment/Magnifier" index="2"]
+anchors_preset = -1
+text = "Find hidden damage"
+
+[node name="Price" parent="Scroll/Catalog/Equipment/Magnifier" index="3"]
+anchors_preset = -1
+text = "359 G"
+
+[node name="BuyButton" parent="Scroll/Catalog/Equipment/Magnifier" index="4"]
+anchors_preset = -1
+
+[node name="CurseDetector" parent="Scroll/Catalog/Equipment" unique_id=626362492 instance=ExtResource("card")]
+layout_mode = 2
+
+[node name="ItemIcon" parent="Scroll/Catalog/Equipment/CurseDetector" index="0"]
+anchors_preset = -1
+texture = ExtResource("icon_CurseDetector")
+stretch_mode = 5
+
+[node name="ItemName" parent="Scroll/Catalog/Equipment/CurseDetector" index="1"]
+anchors_preset = -1
+text = "Curse detector"
+
+[node name="Description" parent="Scroll/Catalog/Equipment/CurseDetector" index="2"]
+anchors_preset = -1
+text = "Reveal hidden curses"
+
+[node name="Price" parent="Scroll/Catalog/Equipment/CurseDetector" index="3"]
+anchors_preset = -1
+text = "1000 G"
+
+[node name="BuyButton" parent="Scroll/Catalog/Equipment/CurseDetector" index="4"]
+anchors_preset = -1
+
+[node name="Clock" parent="Scroll/Catalog/Equipment" unique_id=806884324 instance=ExtResource("card")]
+layout_mode = 2
+
+[node name="ItemIcon" parent="Scroll/Catalog/Equipment/Clock" index="0"]
+anchors_preset = -1
+texture = ExtResource("icon_Clock")
+stretch_mode = 5
+
+[node name="ItemName" parent="Scroll/Catalog/Equipment/Clock" index="1"]
+anchors_preset = -1
+text = "Clock"
+
+[node name="Description" parent="Scroll/Catalog/Equipment/Clock" index="2"]
+anchors_preset = -1
+text = "Tell the time"
+
+[node name="Price" parent="Scroll/Catalog/Equipment/Clock" index="3"]
+anchors_preset = -1
+text = "350 G"
+
+[node name="BuyButton" parent="Scroll/Catalog/Equipment/Clock" index="4"]
+anchors_preset = -1
+
+[node name="Radio" parent="Scroll/Catalog/Equipment" unique_id=2044227886 instance=ExtResource("card")]
+layout_mode = 2
+
+[node name="ItemIcon" parent="Scroll/Catalog/Equipment/Radio" index="0"]
+anchors_preset = -1
+texture = ExtResource("icon_Radio")
+stretch_mode = 5
+
+[node name="ItemName" parent="Scroll/Catalog/Equipment/Radio" index="1"]
+anchors_preset = -1
+text = "Radio"
+
+[node name="Description" parent="Scroll/Catalog/Equipment/Radio" index="2"]
+anchors_preset = -1
+text = "Play shop music"
+
+[node name="Price" parent="Scroll/Catalog/Equipment/Radio" index="3"]
+anchors_preset = -1
+
+[node name="BuyButton" parent="Scroll/Catalog/Equipment/Radio" index="4"]
+anchors_preset = -1
+
+[node name="Roomba" parent="Scroll/Catalog/Equipment" instance=ExtResource("card")]
+layout_mode = 2
+
+[node name="ItemIcon" parent="Scroll/Catalog/Equipment/Roomba" index="0"]
+texture = ExtResource("preview_Roomba")
+stretch_mode = 5
+
+[node name="ItemName" parent="Scroll/Catalog/Equipment/Roomba" index="1"]
+text = "Roomba"
+
+[node name="Description" parent="Scroll/Catalog/Equipment/Roomba" index="2"]
+text = "Cleans every mess automatically · 20 seconds each"
+
+[node name="Price" parent="Scroll/Catalog/Equipment/Roomba" index="3"]
+text = "2500 G"
+
+[node name="FurnitureHeading" type="Label" parent="Scroll/Catalog" unique_id=574532265]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.45, 0.17, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 30
+text = "Furniture"
+
+[node name="Furniture" type="GridContainer" parent="Scroll/Catalog" unique_id=2006091605]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 14
+columns = 4
+
+[node name="DisplayShelf" parent="Scroll/Catalog/Furniture" unique_id=1182821873 instance=ExtResource("card")]
+layout_mode = 2
+
+[node name="ItemIcon" parent="Scroll/Catalog/Furniture/DisplayShelf" index="0"]
+texture = ExtResource("preview_DisplayShelf")
+anchors_preset = -1
+stretch_mode = 5
+
+[node name="ItemName" parent="Scroll/Catalog/Furniture/DisplayShelf" index="1"]
+anchors_preset = -1
+text = "Display shelf"
+
+[node name="Description" parent="Scroll/Catalog/Furniture/DisplayShelf" index="2"]
+anchors_preset = -1
+
+[node name="Price" parent="Scroll/Catalog/Furniture/DisplayShelf" index="3"]
+anchors_preset = -1
+
+[node name="BuyButton" parent="Scroll/Catalog/Furniture/DisplayShelf" index="4"]
+anchors_preset = -1
+
+[node name="OpenShelf" parent="Scroll/Catalog/Furniture" unique_id=1258132931 instance=ExtResource("card")]
+layout_mode = 2
+
+[node name="ItemIcon" parent="Scroll/Catalog/Furniture/OpenShelf" index="0"]
+texture = ExtResource("preview_OpenShelf")
+anchors_preset = -1
+stretch_mode = 5
+
+[node name="ItemName" parent="Scroll/Catalog/Furniture/OpenShelf" index="1"]
+anchors_preset = -1
+text = "Open shelf"
+
+[node name="Description" parent="Scroll/Catalog/Furniture/OpenShelf" index="2"]
+anchors_preset = -1
+
+[node name="Price" parent="Scroll/Catalog/Furniture/OpenShelf" index="3"]
+anchors_preset = -1
+text = "250 G"
+
+[node name="BuyButton" parent="Scroll/Catalog/Furniture/OpenShelf" index="4"]
+anchors_preset = -1
+
+[node name="GlassCounter" parent="Scroll/Catalog/Furniture" unique_id=824292120 instance=ExtResource("card")]
+layout_mode = 2
+
+[node name="ItemIcon" parent="Scroll/Catalog/Furniture/GlassCounter" index="0"]
+texture = ExtResource("preview_GlassCounter")
+anchors_preset = -1
+stretch_mode = 5
+
+[node name="ItemName" parent="Scroll/Catalog/Furniture/GlassCounter" index="1"]
+anchors_preset = -1
+text = "Glass display counter"
+
+[node name="Description" parent="Scroll/Catalog/Furniture/GlassCounter" index="2"]
+anchors_preset = -1
+text = "3 × 2 floor cells"
+
+[node name="Price" parent="Scroll/Catalog/Furniture/GlassCounter" index="3"]
+anchors_preset = -1
+text = "350 G"
+
+[node name="BuyButton" parent="Scroll/Catalog/Furniture/GlassCounter" index="4"]
+anchors_preset = -1
+
+[node name="WeaponRack" parent="Scroll/Catalog/Furniture" unique_id=101139553 instance=ExtResource("card")]
+layout_mode = 2
+
+[node name="ItemIcon" parent="Scroll/Catalog/Furniture/WeaponRack" index="0"]
+texture = ExtResource("preview_WeaponRack")
+anchors_preset = -1
+stretch_mode = 5
+
+[node name="ItemName" parent="Scroll/Catalog/Furniture/WeaponRack" index="1"]
+anchors_preset = -1
+text = "Weapon rack"
+
+[node name="Description" parent="Scroll/Catalog/Furniture/WeaponRack" index="2"]
+anchors_preset = -1
+
+[node name="Price" parent="Scroll/Catalog/Furniture/WeaponRack" index="3"]
+anchors_preset = -1
+text = "500 G"
+
+[node name="BuyButton" parent="Scroll/Catalog/Furniture/WeaponRack" index="4"]
+anchors_preset = -1
+
+[node name="GlassCabinet" parent="Scroll/Catalog/Furniture" unique_id=916191014 instance=ExtResource("card")]
+layout_mode = 2
+
+[node name="ItemIcon" parent="Scroll/Catalog/Furniture/GlassCabinet" index="0"]
+texture = ExtResource("preview_GlassCabinet")
+anchors_preset = -1
+stretch_mode = 5
+
+[node name="ItemName" parent="Scroll/Catalog/Furniture/GlassCabinet" index="1"]
+anchors_preset = -1
+text = "Glass cabinet"
+
+[node name="Description" parent="Scroll/Catalog/Furniture/GlassCabinet" index="2"]
+anchors_preset = -1
+text = "2 × 2 floor cells"
+
+[node name="Price" parent="Scroll/Catalog/Furniture/GlassCabinet" index="3"]
+anchors_preset = -1
+text = "650 G"
+
+[node name="BuyButton" parent="Scroll/Catalog/Furniture/GlassCabinet" index="4"]
+anchors_preset = -1
+
+[node name="TallVitrine" parent="Scroll/Catalog/Furniture" unique_id=2064900576 instance=ExtResource("card")]
+layout_mode = 2
+
+[node name="ItemIcon" parent="Scroll/Catalog/Furniture/TallVitrine" index="0"]
+texture = ExtResource("preview_TallVitrine")
+anchors_preset = -1
+stretch_mode = 5
+
+[node name="ItemName" parent="Scroll/Catalog/Furniture/TallVitrine" index="1"]
+anchors_preset = -1
+text = "Tall vitrine"
+
+[node name="Description" parent="Scroll/Catalog/Furniture/TallVitrine" index="2"]
+anchors_preset = -1
+text = "2 × 2 floor cells"
+
+[node name="Price" parent="Scroll/Catalog/Furniture/TallVitrine" index="3"]
+anchors_preset = -1
+text = "750 G"
+
+[node name="BuyButton" parent="Scroll/Catalog/Furniture/TallVitrine" index="4"]
+anchors_preset = -1
+
+[node name="CombinationCabinet" parent="Scroll/Catalog/Furniture" unique_id=644520468 instance=ExtResource("card")]
+layout_mode = 2
+
+[node name="ItemIcon" parent="Scroll/Catalog/Furniture/CombinationCabinet" index="0"]
+texture = ExtResource("preview_CombinationCabinet")
+anchors_preset = -1
+stretch_mode = 5
+
+[node name="ItemName" parent="Scroll/Catalog/Furniture/CombinationCabinet" index="1"]
+anchors_preset = -1
+text = "Combination cabinet"
+
+[node name="Description" parent="Scroll/Catalog/Furniture/CombinationCabinet" index="2"]
+anchors_preset = -1
+text = "3 × 2 floor cells"
+
+[node name="Price" parent="Scroll/Catalog/Furniture/CombinationCabinet" index="3"]
+anchors_preset = -1
+text = "900 G"
+
+[node name="BuyButton" parent="Scroll/Catalog/Furniture/CombinationCabinet" index="4"]
+anchors_preset = -1
+
+[node name="Pedestal" parent="Scroll/Catalog/Furniture" unique_id=1585570095 instance=ExtResource("card")]
+layout_mode = 2
+
+[node name="ItemIcon" parent="Scroll/Catalog/Furniture/Pedestal" index="0"]
+texture = ExtResource("preview_Pedestal")
+anchors_preset = -1
+stretch_mode = 5
+
+[node name="ItemName" parent="Scroll/Catalog/Furniture/Pedestal" index="1"]
+anchors_preset = -1
+text = "Display pedestal"
+
+[node name="Description" parent="Scroll/Catalog/Furniture/Pedestal" index="2"]
+anchors_preset = -1
+text = "2 × 2 floor cells"
+
+[node name="Price" parent="Scroll/Catalog/Furniture/Pedestal" index="3"]
+anchors_preset = -1
+text = "1200 G"
+
+[node name="BuyButton" parent="Scroll/Catalog/Furniture/Pedestal" index="4"]
+anchors_preset = -1
+
+[node name="EmptySearch" type="Label" parent="." unique_id=354210051]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.21
+anchor_right = 0.85
+anchor_bottom = 0.3
+theme_override_colors/font_color = Color(0.2, 0.15, 0.1, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 23
+text = "No matching items"
+
+[node name="Actions" type="HBoxContainer" parent="." unique_id=1405914878]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.11
+anchor_top = 0.887
+anchor_right = 0.9
+anchor_bottom = 0.928
+theme_override_constants/separation = 15
+
+[node name="CloseButton" type="Button" parent="Actions" unique_id=1006581534]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.25, 0.12, 0.05, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 16
+text = "Close"
+
+[node name="SwitchMenuButton" type="Button" parent="Actions" unique_id=497813754]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.25, 0.12, 0.05, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 16
+text = "Stock"
+
+[node name="RentButton" type="Button" parent="Actions" unique_id=1188656123]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.25, 0.12, 0.05, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 16
+text = "Pay rent"
+
+[node name="WaitButton" type="Button" parent="Actions" unique_id=2129051499]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.25, 0.12, 0.05, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 16
+text = "Wait"
+
+[node name="SleepButton" type="Button" parent="Actions" unique_id=730433912]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.25, 0.12, 0.05, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 16
+text = "Sleep"
+
+[node name="WindowCloseButton" type="Button" parent="." unique_id=1484728221]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.933
+anchor_top = 0.029
+anchor_right = 0.954
+anchor_bottom = 0.064
+tooltip_text = "Close shop"
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("Empty")
+theme_override_styles/pressed = SubResource("Empty")
+theme_override_styles/hover = SubResource("Empty")
+
+[node name="MinimizeButton" type="Button" parent="." unique_id=2003758196]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.895
+anchor_top = 0.029
+anchor_right = 0.916
+anchor_bottom = 0.064
+tooltip_text = "Close shop"
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("Empty")
+theme_override_styles/hover = SubResource("Empty")
+
+[node name="MaximizeButton" type="Button" parent="." unique_id=96021669]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.914
+anchor_top = 0.029
+anchor_right = 0.933
+anchor_bottom = 0.064
+tooltip_text = "Expand shop window"
+mouse_default_cursor_shape = 2
+theme_override_styles/normal = SubResource("Empty")
+theme_override_styles/hover = SubResource("Empty")
+
+[editable path="Scroll/Catalog/Equipment/Magnifier"]
+[editable path="Scroll/Catalog/Equipment/CurseDetector"]
+[editable path="Scroll/Catalog/Equipment/Clock"]
+[editable path="Scroll/Catalog/Equipment/Radio"]
+[editable path="Scroll/Catalog/Equipment/Roomba"]
+[editable path="Scroll/Catalog/Furniture/DisplayShelf"]
+[editable path="Scroll/Catalog/Furniture/OpenShelf"]
+[editable path="Scroll/Catalog/Furniture/GlassCounter"]
+[editable path="Scroll/Catalog/Furniture/WeaponRack"]
+[editable path="Scroll/Catalog/Furniture/GlassCabinet"]
+[editable path="Scroll/Catalog/Furniture/TallVitrine"]
+[editable path="Scroll/Catalog/Furniture/CombinationCabinet"]
+[editable path="Scroll/Catalog/Furniture/Pedestal"]

@@ -1,0 +1,60 @@
+[gd_scene load_steps=12 format=3]
+[ext_resource type="Script" path="res://scripts/cleaning_manager.gd" id="manager"]
+[ext_resource type="PackedScene" path="res://assets/Cleaning/Broom.glb" id="broom"]
+[ext_resource type="PackedScene" path="res://assets/Cleaning/mop.glb" id="mop"]
+[ext_resource type="PackedScene" path="res://assets/Cleaning/duster.glb" id="duster"]
+[ext_resource type="PackedScene" path="res://assets/Cleaning/trashes.glb" id="trash1"]
+[ext_resource type="PackedScene" path="res://assets/Cleaning/trashes2.glb" id="trash2"]
+[ext_resource type="PackedScene" path="res://assets/Cleaning/trashes3.glb" id="trash3"]
+[ext_resource type="PackedScene" path="res://assets/Cleaning/trashesDrinks.glb" id="drink"]
+[ext_resource type="PackedScene" path="res://assets/Cleaning/Trashbag.fbx" id="bag"]
+[ext_resource type="PackedScene" path="res://assets/Cleaning/Roomba.glb" id="robot"]
+[ext_resource type="PackedScene" path="res://assets/Cleaning/Dust.glb" id="dust"]
+[node name="CleaningWorld" type="Node3D"]
+script = ExtResource("manager")
+rubbish_models = Array[PackedScene]([ExtResource("trash1"), ExtResource("trash2"), ExtResource("trash3")])
+spill_model = ExtResource("drink")
+broom_model = ExtResource("broom")
+mop_model = ExtResource("mop")
+feather_duster_model = ExtResource("duster")
+trash_bag_models = Array[PackedScene]([ExtResource("bag")])
+roomba_model = ExtResource("robot")
+dust_model = ExtResource("dust")
+
+[node name="FloorSpots" type="Node3D" parent="."]
+[node name="Floor01" type="Marker3D" parent="FloorSpots"]
+position = Vector3(6.0, -0.035, 3.0)
+[node name="Floor02" type="Marker3D" parent="FloorSpots"]
+position = Vector3(1.0, -0.035, 3.5)
+[node name="Floor03" type="Marker3D" parent="FloorSpots"]
+position = Vector3(-2.5, -0.035, 4.0)
+[node name="Floor04" type="Marker3D" parent="FloorSpots"]
+position = Vector3(7.5, -0.035, 5.0)
+[node name="Floor05" type="Marker3D" parent="FloorSpots"]
+position = Vector3(-5.5, -0.035, 2.5)
+[node name="Floor06" type="Marker3D" parent="FloorSpots"]
+position = Vector3(-0.5, -0.035, 5.8)
+[node name="Floor07" type="Marker3D" parent="FloorSpots"]
+position = Vector3(0.0, -0.035, 1.5)
+[node name="Floor08" type="Marker3D" parent="FloorSpots"]
+position = Vector3(5.5, -0.035, 6.2)
+
+[node name="DustSurfaces" type="Node3D" parent="."]
+[node name="CounterDust" type="Marker3D" parent="DustSurfaces"]
+position = Vector3(4.75, 0.88, 0.30)
+
+[node name="ToolSpots" type="Node3D" parent="."]
+[node name="RoombaSpot" type="Marker3D" parent="ToolSpots"]
+position = Vector3(2.6, -0.02, 3.0)
+[node name="BroomSpot" type="Marker3D" parent="ToolSpots"]
+position = Vector3(5.1, -0.035, -1.4)
+[node name="MopSpot" type="Marker3D" parent="ToolSpots"]
+position = Vector3(6.0, -0.035, -4.5)
+[node name="DusterSpot" type="Marker3D" parent="ToolSpots"]
+position = Vector3(3.2, 0.85, -4.5)
+[node name="MopWashSpot" type="Marker3D" parent="ToolSpots"]
+position = Vector3(6.5, 0.85, -4.5)
+[node name="TrashBagSpot" type="Marker3D" parent="ToolSpots"]
+position = Vector3(5.6, -0.035, -1.4)
+[node name="DumpsterSpot" type="Marker3D" parent="ToolSpots"]
+position = Vector3(5.5, -0.035, -7.2)

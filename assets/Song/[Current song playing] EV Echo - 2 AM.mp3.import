@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cncaammj5w2d6"
+path="res://.godot/imported/[Current song playing] EV Echo - 2 AM.mp3-b94558e123aad2902310262ee8ab5a90.mp3str"
+
+[deps]
+
+source_file="res://assets/Song/[Current song playing] EV Echo - 2 AM.mp3"
+dest_files=["res://.godot/imported/[Current song playing] EV Echo - 2 AM.mp3-b94558e123aad2902310262ee8ab5a90.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

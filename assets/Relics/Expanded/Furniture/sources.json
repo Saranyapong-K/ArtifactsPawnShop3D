@@ -1,0 +1,111 @@
+[
+  {
+	"name": "furn_glass_cabinet.glb",
+	"bytes": 11232,
+	"source_url": "https://drive.google.com/file/d/1OHJn3OcGRkiBv2GAzjPh0Pmso0kWJ2JR/view?usp=drivesdk",
+	"sha256": "320569b35638572b8274e20bd98398b937e9b1f6df6da24ce5cc56f6b7afc457",
+	"nodes": [
+      "furn_glass_cabinet"
+	]
+  },
+  {
+	"name": "furn_shelf.glb",
+	"bytes": 8856,
+	"source_url": "https://drive.google.com/file/d/12MtdmqgZebz71RVzTPt5Yoj-PQiCEsTZ/view?usp=drivesdk",
+	"sha256": "6de5aa3bd1f42c01560f233382fc9abfe96dcc9ad28ccb06421257570e7c2db4",
+	"nodes": [
+      "furn_shelf"
+	]
+  },
+  {
+	"name": "cab_pedestal_dome.glb",
+	"bytes": 28592,
+	"source_url": "https://drive.google.com/file/d/1yJCE5jGvl6YsDTzp1VyGoaIfVhyzAvjL/view?usp=drivesdk",
+	"sha256": "ee63bcdf864833d62cc46e62814ad8a9345798822ab5ba01a26a2537c07623c6",
+	"nodes": [
+	  "slot_S_cab_pedestal_dome_0",
+      "cab_pedestal_dome"
+	]
+  },
+  {
+	"name": "cab_combo.glb",
+	"bytes": 21724,
+	"source_url": "https://drive.google.com/file/d/177PkGS51LaPLIau_x1CIDHrWP-vz5FnW/view?usp=drivesdk",
+	"sha256": "a905a6cee446fe69822f89a0cc4afb11ec2516554beeb0ea832f1f46f104a2a4",
+	"nodes": [
+	  "slot_L_cab_combo_0",
+	  "slot_L_cab_combo_1",
+	  "slot_S_cab_combo_0",
+	  "slot_S_cab_combo_1",
+	  "slot_S_cab_combo_2",
+      "cab_combo"
+	]
+  },
+  {
+	"name": "cab_weapon_rack.glb",
+	"bytes": 10488,
+	"source_url": "https://drive.google.com/file/d/1bXG1lnP-xux11x6swYXbqBQe4HH3yfXX/view?usp=drivesdk",
+	"sha256": "89dcf65b35edc45c25171e9f96ad872f7ec0e1941db79f8e38a2deac5518fe86",
+	"nodes": [
+	  "slot_L_cab_weapon_rack_0",
+	  "slot_L_cab_weapon_rack_1",
+	  "slot_L_cab_weapon_rack_2",
+	  "slot_L_cab_weapon_rack_3",
+	  "slot_L_cab_weapon_rack_4",
+	  "slot_L_cab_weapon_rack_5",
+	  "slot_L_cab_weapon_rack_6",
+	  "slot_L_cab_weapon_rack_7",
+      "cab_weapon_rack"
+	]
+  },
+  {
+	"name": "cab_tall_vitrine.glb",
+	"bytes": 13220,
+	"source_url": "https://drive.google.com/file/d/1BubPRMb8SUTmSIa_rDoQFFxOnDMaqHmd/view?usp=drivesdk",
+	"sha256": "448bfed99aa71691cc8b04bc431bc8369855c0e8dc36be20f9fc8ca3659eb6e9",
+	"nodes": [
+	  "slot_S_cab_tall_vitrine_0",
+	  "slot_S_cab_tall_vitrine_1",
+	  "slot_S_cab_tall_vitrine_2",
+	  "slot_S_cab_tall_vitrine_3",
+	  "slot_S_cab_tall_vitrine_4",
+	  "slot_S_cab_tall_vitrine_5",
+	  "slot_S_cab_tall_vitrine_6",
+	  "slot_S_cab_tall_vitrine_7",
+      "cab_tall_vitrine"
+	]
+  },
+  {
+	"name": "cab_counter_glass.glb",
+	"bytes": 21484,
+	"source_url": "https://drive.google.com/file/d/1ZATdfj5jTHDES5u-aS8E1nCDEOFoTP1E/view?usp=drivesdk",
+	"sha256": "4fa874b9176dcafb9f6051337d86c220532209853cfdaa40329c284c405d176b",
+	"nodes": [
+	  "slot_S_cab_counter_glass_0",
+	  "slot_S_cab_counter_glass_1",
+	  "slot_S_cab_counter_glass_2",
+      "cab_counter_glass"
+	]
+  },
+  {
+	"name": "cab_open_shelf.glb",
+	"bytes": 11000,
+	"source_url": "https://drive.google.com/file/d/1Ar2Au-kb7kh120cXBnUGvG9_yFGukOxK/view?usp=drivesdk",
+	"sha256": "a7a591fd947d1f9c7f3576f53f2d7f87acebb13acb200f5de217fd76596b7b45",
+	"nodes": [
+	  "slot_S_cab_open_shelf_0",
+	  "slot_S_cab_open_shelf_1",
+	  "slot_S_cab_open_shelf_2",
+	  "slot_S_cab_open_shelf_3",
+	  "slot_S_cab_open_shelf_4",
+	  "slot_S_cab_open_shelf_5",
+	  "slot_S_cab_open_shelf_6",
+	  "slot_S_cab_open_shelf_7",
+	  "slot_S_cab_open_shelf_8",
+	  "slot_S_cab_open_shelf_9",
+	  "slot_S_cab_open_shelf_10",
+	  "slot_S_cab_open_shelf_11",
+      "cab_open_shelf"
+	]
+  }
+]

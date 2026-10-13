@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://b0afu06mxpndd"]
+
+[ext_resource type="Texture2D" uid="uid://dp0pxong6shcb" path="res://assets/UIs/rectangleui.png" id="1_654h1"]
+[ext_resource type="Script" uid="uid://caoooxwtdfc1c" path="res://player_ui.gd" id="1_gxl1c"]
+[ext_resource type="Texture2D" uid="uid://itq0c5548o2y" path="res://assets/UIs/DayMoneyUI.png" id="1_lwipk"]
+[ext_resource type="FontFile" uid="uid://1m1jecpeajif" path="res://assets/Fonts/Alice-Regular.ttf" id="2_a4em4"]
+[ext_resource type="Texture2D" uid="uid://b500fw8klvl3e" path="res://assets/UIs/timerui.png" id="2_pc08v"]
+[ext_resource type="Texture2D" uid="uid://b38pucaps05s1" path="res://assets/UIs/Sun.png" id="3_gxl1c"]
+[ext_resource type="Texture2D" uid="uid://bgub4m8l7i8ws" path="res://assets/UIs/Moon.png" id="4_vg8o0"]
+
+[node name="PlayerUI" type="Control" unique_id=981765860]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gxl1c")
+
+[node name="InfoPanel" type="Control" parent="." unique_id=1299096081]
+anchors_preset = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 42.0
+offset_bottom = 42.0
+
+[node name="Clockpanel" type="Control" parent="InfoPanel" unique_id=125169629]
+anchors_preset = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 38.0
+offset_bottom = 38.0
+
+[node name="TimeTexture" type="TextureRect" parent="InfoPanel/Clockpanel" unique_id=1012258116]
+layout_mode = 0
+offset_top = 110.0
+offset_right = 733.0
+offset_bottom = 332.0
+scale = Vector2(0.3177208, 0.36472127)
+texture = ExtResource("2_pc08v")
+
+[node name="Time" type="Label" parent="InfoPanel/Clockpanel" unique_id=430188151]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 127.0
+offset_right = 170.0
+offset_bottom = 165.0
+theme_override_colors/font_color = Color(0.2509804, 0.101960786, 0, 1)
+theme_override_fonts/font = ExtResource("2_a4em4")
+theme_override_font_sizes/font_size = 32
+text = "10:30"
+
+[node name="Sun" type="TextureRect" parent="InfoPanel/Clockpanel" unique_id=672629011]
+layout_mode = 0
+offset_left = 26.999998
+offset_top = 132.0
+offset_right = 267.0
+offset_bottom = 372.0
+scale = Vector2(0.13099802, 0.13099802)
+texture = ExtResource("3_gxl1c")
+
+[node name="Moon" type="TextureRect" parent="InfoPanel/Clockpanel" unique_id=83299686]
+layout_mode = 0
+offset_left = 26.999998
+offset_top = 132.0
+offset_right = 267.0
+offset_bottom = 372.0
+scale = Vector2(0.13099802, 0.13099802)
+texture = ExtResource("4_vg8o0")
+
+[node name="RentTexture" type="TextureRect" parent="InfoPanel" unique_id=971131585]
+layout_mode = 0
+offset_left = -52.999996
+offset_top = 25.999998
+offset_right = 680.0
+offset_bottom = 245.0
+scale = Vector2(0.4576205, 0.4576205)
+texture = ExtResource("1_654h1")
+
+[node name="DayMoneytexture" type="TextureRect" parent="InfoPanel" unique_id=180166599]
+layout_mode = 0
+offset_right = 806.0
+offset_bottom = 235.0
+scale = Vector2(0.4226331, 0.4226331)
+texture = ExtResource("1_lwipk")
+
+[node name="DayLabel" type="Label" parent="InfoPanel" unique_id=41454604]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 37.0
+offset_right = 111.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(0.2509804, 0.101960786, 0, 1)
+theme_override_fonts/font = ExtResource("2_a4em4")
+theme_override_font_sizes/font_size = 21
+text = "Day 1"
+
+[node name="MoneyLabel" type="Label" parent="InfoPanel" unique_id=1504414338]
+layout_mode = 0
+offset_left = 163.0
+offset_top = 35.0
+offset_right = 225.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.2509804, 0.101960786, 0, 1)
+theme_override_fonts/font = ExtResource("2_a4em4")
+theme_override_font_sizes/font_size = 24
+text = "500 G"
+
+[node name="RentLabel" type="Label" parent="InfoPanel" unique_id=788720922]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 78.0
+offset_right = 94.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(0.2509804, 0.101960786, 0, 1)
+theme_override_fonts/font = ExtResource("2_a4em4")
+theme_override_font_sizes/font_size = 20
+text = "Rent in 5 Days"

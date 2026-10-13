@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3]
+[ext_resource type="Script" path="res://scripts/customer_flow.gd" id="flow"]
+[node name="CustomerFlow" type="Node3D"]
+script = ExtResource("flow")
+[node name="QueueSpots" type="Node3D" parent="."]
+[node name="QueueSpot01" type="Marker3D" parent="QueueSpots"]
+position = Vector3(0, 0, 1.05)
+[node name="QueueSpot02" type="Marker3D" parent="QueueSpots"]
+position = Vector3(0, 0, 2.1)
+[node name="QueueSpot03" type="Marker3D" parent="QueueSpots"]
+position = Vector3(0, 0, 3.15)
+[node name="BrowseSpots" type="Node3D" parent="."]
+[node name="BrowseLeft" type="Marker3D" parent="BrowseSpots"]
+position = Vector3(-3.2, 0, 3.3)
+[node name="BrowseCenter" type="Marker3D" parent="BrowseSpots"]
+position = Vector3(0.2, 0, 4.3)
+[node name="BrowseRight" type="Marker3D" parent="BrowseSpots"]
+position = Vector3(7.4, 0, 4.3)
+[node name="BrowseFront" type="Marker3D" parent="BrowseSpots"]
+position = Vector3(2.5, 0, 6.1)

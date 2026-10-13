@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bwc8y7e8h60tf"]
+
+[ext_resource type="PackedScene" path="res://ui/receipt_menu.tscn" id="1_result"]
+
+[node name="PriceEditorMenu" unique_id=975402097 instance=ExtResource("1_result")]
+anchors_preset = 15
+
+[node name="BackgroundArtwork" parent="." index="0"]
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultHeading" parent="Center/ResultContent" parent_id_path=PackedInt32Array(655547904) index="0" unique_id=2049955785]
+text = "SET YOUR SELL PRICE"
+
+[node name="NextButton" parent="Center/ResultContent" parent_id_path=PackedInt32Array(655547904) index="3" unique_id=50281782]
+visible = false
+
+[node name="PriceRow" parent="Center/ResultContent" parent_id_path=PackedInt32Array(655547904) index="4" unique_id=10724056]
+visible = true
+
+[node name="SavePriceButton" parent="Center/ResultContent" parent_id_path=PackedInt32Array(655547904) index="5" unique_id=1849202398]
+visible = true

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dni16jap2duap"]
+[ext_resource type="PackedScene" uid="uid://bkl6f5d4s4sc8" path="res://assets/World.glb" id="world"]
+[ext_resource type="Script" path="res://scripts/world_runtime.gd" id="runtime"]
+[node name="World" instance=ExtResource("world")]
+script = ExtResource("runtime")

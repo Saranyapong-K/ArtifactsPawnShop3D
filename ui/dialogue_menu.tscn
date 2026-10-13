@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://cklc1l5qcpmbx"]
+
+[ext_resource type="Texture2D" path="res://ui/arrow_down.tres" id="1_k4wja"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g64ic"]
+content_margin_left = 28.0
+content_margin_top = 6.0
+content_margin_right = 28.0
+content_margin_bottom = 22.0
+bg_color = Color(0.9098039, 0.7137255, 0.5176471, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.72156864, 0.4745098, 0.24705882, 1)
+corner_radius_top_left = 26
+corner_radius_top_right = 26
+corner_radius_bottom_right = 26
+corner_radius_bottom_left = 26
+
+[node name="DialogueMenu" type="VBoxContainer" unique_id=275983709]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="TopSpacer" type="Control" parent="." unique_id=1047549239]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1468828214]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="DialoguePanel" type="PanelContainer" parent="Center" unique_id=1428305595]
+custom_minimum_size = Vector2(1100, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g64ic")
+
+[node name="PanelArtwork" type="TextureRect" parent="Center/DialoguePanel" unique_id=150816781]
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+metadata/_editor_description_ = "Optional panel artwork. Drag your image into Texture. Set the parent's panel style to StyleBoxEmpty when replacing its placeholder colour."
+
+[node name="DialogueContent" type="HBoxContainer" parent="Center/DialoguePanel" unique_id=618973742]
+layout_mode = 2
+
+[node name="DialogueText" type="Label" parent="Center/DialoguePanel/DialogueContent" unique_id=706703593]
+custom_minimum_size = Vector2(900, 96)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.45666796, 0.24221763, 0.11488461, 1)
+theme_override_colors/font_outline_color = Color(0.3626545, 0.24866393, 0.085005246, 1)
+theme_override_font_sizes/font_size = 42
+text = "Welcome to our little shop."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ContinueIndicator" type="TextureRect" parent="Center/DialoguePanel/DialogueContent" unique_id=1434296832]
+visible = false
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("1_k4wja")
+stretch_mode = 3
+
+[node name="BottomSpacing" type="Control" parent="." unique_id=1261790239]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+mouse_filter = 2

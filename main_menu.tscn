@@ -1,0 +1,511 @@
+[gd_scene format=3 uid="uid://biwmci2t81e2f"]
+
+[ext_resource type="Script" uid="uid://b65olbqbumesg" path="res://scripts/main_menu.gd" id="1_menu"]
+[ext_resource type="Texture2D" uid="uid://ddx1ahtp6sbh5" path="res://assets/01_far_landscape.png" id="2_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://6h4bqaac8q6a" path="res://assets/02_town_and_lake.png" id="3_qe12f"]
+[ext_resource type="Texture2D" uid="uid://psu2edwjslrc" path="res://assets/03_shop_foreground.png" id="4_8qtwp"]
+[ext_resource type="PackedScene" uid="uid://cydpewcst5mrk" path="res://ui/settings_menu.tscn" id="5_dy7ct"]
+[ext_resource type="PackedScene" uid="uid://b37f6ul0ah6bd" path="res://ui/credits_menu.tscn" id="7_credits"]
+[ext_resource type="AudioStream" uid="uid://cncaammj5w2d6" path="res://assets/Song/[Current song playing] EV Echo - 2 AM.mp3" id="song_0"]
+[ext_resource type="AudioStream" uid="uid://det61gvjsrpyy" path="res://assets/Song/[Current song playing] hazel - In Dreamland.mp3" id="song_1"]
+[ext_resource type="AudioStream" uid="uid://c347o2veilfmb" path="res://assets/Song/[Current song playing] kith - little break.mp3" id="song_2"]
+[ext_resource type="AudioStream" uid="uid://do2vb3dqjf0y7" path="res://assets/Song/[Current song playing] 80sFlav - On The Top.mp3" id="song_3"]
+[ext_resource type="AudioStream" uid="uid://bqiopaebxgf40" path="res://assets/Song/[Current song playing] hazel - SweetSyrups.mp3" id="song_4"]
+[ext_resource type="AudioStream" uid="uid://bph1kluf4k6tu" path="res://assets/Song/[Current song playing] slvx  - Taiyaki .mp3" id="song_5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0k4wn"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5294118, 0.14117648, 0.03137255, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5v2v"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5294118, 0.14117648, 0.03137255, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iotk1"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5905883, 0.25282353, 0.15729411, 0.9)
+border_width_left = 4
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w44g7"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.2901961, 0.13725491, 0.05490196, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cm266"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5905883, 0.25282353, 0.15729411, 0.9)
+border_width_left = 4
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8g3n"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5294118, 0.14117648, 0.03137255, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u0te"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5294118, 0.14117648, 0.03137255, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oiatc"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5905883, 0.25282353, 0.15729411, 0.9)
+border_width_left = 4
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mg3m2"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.2901961, 0.13725491, 0.05490196, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojb7r"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5905883, 0.25282353, 0.15729411, 0.9)
+border_width_left = 4
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e5qqf"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5294118, 0.14117648, 0.03137255, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7bbuq"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5294118, 0.14117648, 0.03137255, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_saq78"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5905883, 0.25282353, 0.15729411, 0.9)
+border_width_left = 4
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8uw0o"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.2901961, 0.13725491, 0.05490196, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ql5ya"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5905883, 0.25282353, 0.15729411, 0.9)
+border_width_left = 4
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ka3nr"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5294118, 0.14117648, 0.03137255, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48knj"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5294118, 0.14117648, 0.03137255, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m2y5l"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5905883, 0.25282353, 0.15729411, 0.9)
+border_width_left = 4
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_imjy1"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.2901961, 0.13725491, 0.05490196, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5051"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5905883, 0.25282353, 0.15729411, 0.9)
+border_width_left = 4
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v2sba"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5294118, 0.14117648, 0.03137255, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ai24q"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5294118, 0.14117648, 0.03137255, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qby1g"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5905883, 0.25282353, 0.15729411, 0.9)
+border_width_left = 4
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_04soa"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.2901961, 0.13725491, 0.05490196, 0.9)
+border_width_left = 1
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6vjd"]
+content_margin_left = 18.0
+content_margin_right = 18.0
+bg_color = Color(0.5905883, 0.25282353, 0.15729411, 0.9)
+border_width_left = 4
+border_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="MainMenu" type="Control" unique_id=1700444590]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+menu_music = Array[AudioStream]([ExtResource("song_0"), ExtResource("song_1"), ExtResource("song_2"), ExtResource("song_3"), ExtResource("song_4"), ExtResource("song_5")])
+
+[node name="FarLandscape" type="TextureRect" parent="." unique_id=1269737403]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -35.0
+offset_right = 45.0
+offset_bottom = 35.0
+mouse_filter = 2
+texture = ExtResource("2_nlkkf")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TownAndLake" type="TextureRect" parent="." unique_id=1027183651]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -35.0
+offset_right = 45.0
+offset_bottom = 35.0
+mouse_filter = 2
+texture = ExtResource("3_qe12f")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ShopForeground" type="TextureRect" parent="." unique_id=1143402588]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -45.0
+offset_top = -35.0
+offset_right = 45.0
+offset_bottom = 35.0
+mouse_filter = 2
+texture = ExtResource("4_8qtwp")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="SceneTint" type="ColorRect" parent="." unique_id=1879902794]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0.13, 0.045, 0.015, 0.25)
+
+[node name="Margins" type="MarginContainer" parent="." unique_id=640773245]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_left = 66
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 34
+
+[node name="MenuContent" type="VBoxContainer" parent="Margins" unique_id=2010141517]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="Margins/MenuContent" unique_id=1632103008]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+theme_override_colors/font_outline_color = Color(0.2901961, 0.13725491, 0.05490196, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 56
+text = "Artifacts
+Pawn Shop"
+
+[node name="Tagline" type="Label" parent="Margins/MenuContent" unique_id=1307836970]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94509804, 0.8627451, 1)
+theme_override_colors/font_outline_color = Color(0.2901961, 0.13725491, 0.05490196, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 20
+text = "A little shop. A world of treasures."
+
+[node name="TitleSpacing" type="Control" parent="Margins/MenuContent" unique_id=1764605062]
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+
+[node name="NewGameButton" type="Button" parent="Margins/MenuContent" unique_id=957491580]
+custom_minimum_size = Vector2(250, 46)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.94509804, 0.8627451, 1)
+theme_override_colors/font_disabled_color = Color(0.7254902, 0.5803922, 0.4392157, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_0k4wn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5v2v")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iotk1")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_w44g7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_cm266")
+text = "New game"
+metadata/_editor_description_ = "Artwork: assign StyleBoxTexture in Theme Overrides > Styles for normal, hover, pressed, disabled and focus."
+
+[node name="ContinueButton" type="Button" parent="Margins/MenuContent" unique_id=1610122411]
+custom_minimum_size = Vector2(250, 46)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.94509804, 0.8627451, 1)
+theme_override_colors/font_disabled_color = Color(0.7254902, 0.5803922, 0.4392157, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_g8g3n")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8u0te")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oiatc")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_mg3m2")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ojb7r")
+disabled = true
+text = "Continue"
+metadata/_editor_description_ = "Artwork: assign StyleBoxTexture in Theme Overrides > Styles for normal, hover, pressed, disabled and focus."
+
+[node name="OptionsButton" type="Button" parent="Margins/MenuContent" unique_id=1618719197]
+custom_minimum_size = Vector2(250, 46)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.94509804, 0.8627451, 1)
+theme_override_colors/font_disabled_color = Color(0.7254902, 0.5803922, 0.4392157, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_e5qqf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7bbuq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_saq78")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8uw0o")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ql5ya")
+text = "Options"
+metadata/_editor_description_ = "Artwork: assign StyleBoxTexture in Theme Overrides > Styles for normal, hover, pressed, disabled and focus."
+
+[node name="CreditsButton" type="Button" parent="Margins/MenuContent" unique_id=1570798259]
+custom_minimum_size = Vector2(250, 46)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.94509804, 0.8627451, 1)
+theme_override_colors/font_disabled_color = Color(0.7254902, 0.5803922, 0.4392157, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_ka3nr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_48knj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_m2y5l")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_imjy1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_u5051")
+text = "Credits"
+metadata/_editor_description_ = "Artwork: assign StyleBoxTexture in Theme Overrides > Styles for normal, hover, pressed, disabled and focus."
+
+[node name="ExitButton" type="Button" parent="Margins/MenuContent" unique_id=2143920910]
+custom_minimum_size = Vector2(250, 46)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 0.94509804, 0.8627451, 1)
+theme_override_colors/font_disabled_color = Color(0.7254902, 0.5803922, 0.4392157, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_v2sba")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ai24q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qby1g")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_04soa")
+theme_override_styles/focus = SubResource("StyleBoxFlat_u6vjd")
+text = "Exit"
+metadata/_editor_description_ = "Artwork: assign StyleBoxTexture in Theme Overrides > Styles for normal, hover, pressed, disabled and focus."
+
+[node name="SaveHint" type="Label" parent="Margins/MenuContent" unique_id=1242232908]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+theme_override_colors/font_outline_color = Color(0.2901961, 0.13725491, 0.05490196, 1)
+theme_override_constants/outline_size = 4
+text = "Start a new game!."
+autowrap_mode = 3
+
+[node name="FooterSpacer" type="Control" parent="Margins/MenuContent" unique_id=658792522]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CreditsMenu" parent="." unique_id=1906926943 instance=ExtResource("7_credits")]
+visible = false
+layout_mode = 1
+
+[node name="SettingsMenu" parent="." unique_id=1873773150 instance=ExtResource("5_dy7ct")]
+visible = false
+pause_when_open = false
+
+[node name="MusicTicker" type="Control" parent="." unique_id=826107901]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -278.0
+offset_top = -48.0
+offset_right = -24.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="TrackName" type="Label" parent="MusicTicker" unique_id=2034991843]
+layout_mode = 0
+offset_left = -45.0
+offset_right = 267.0
+offset_bottom = 25.0
+theme_override_colors/font_color = Color(0.96862745, 0.83137256, 0.45882353, 1)
+theme_override_colors/font_outline_color = Color(0.2901961, 0.13725491, 0.05490196, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 21
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=535002277]
+bus = &"Music"

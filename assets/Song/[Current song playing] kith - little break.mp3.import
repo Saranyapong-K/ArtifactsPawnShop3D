@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c347o2veilfmb"
+path="res://.godot/imported/[Current song playing] kith - little break.mp3-2d77e8338e6b9bd2ee2915e615085787.mp3str"
+
+[deps]
+
+source_file="res://assets/Song/[Current song playing] kith - little break.mp3"
+dest_files=["res://.godot/imported/[Current song playing] kith - little break.mp3-2d77e8338e6b9bd2ee2915e615085787.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

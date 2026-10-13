@@ -1,0 +1,110 @@
+[gd_scene format=3]
+
+[node name="ReceiptMenu" type="ColorRect" unique_id=769891548]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0, 0, 0, 0.78)
+
+[node name="BackgroundArtwork" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Center" type="CenterContainer" parent="." unique_id=1628578394]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ResultContent" type="VBoxContainer" parent="Center" unique_id=655547904]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ResultHeading" type="Label" parent="Center/ResultContent" unique_id=2049955785]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9607843, 0.77254903, 0.25882354, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.22745098, 0.078431375, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 48
+text = "PURCHASE COMPLETE"
+horizontal_alignment = 1
+
+[node name="ResultValue" type="Label" parent="Center/ResultContent" unique_id=1695913499]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.22745098, 0.078431375, 1)
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 96
+text = "0 G"
+horizontal_alignment = 1
+
+[node name="ResultDetails" type="Label" parent="Center/ResultContent" unique_id=1630189147]
+custom_minimum_size = Vector2(760, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.22745098, 0.078431375, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 30
+text = "Today's profit and your wallet"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="NextButton" type="Button" parent="Center/ResultContent" unique_id=50281782]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.9607843, 0.77254903, 0.25882354, 1)
+theme_override_colors/font_focus_color = Color(0.9607843, 0.77254903, 0.25882354, 1)
+theme_override_colors/font_pressed_color = Color(0.9607843, 0.77254903, 0.25882354, 1)
+theme_override_colors/font_hover_color = Color(0.9607843, 0.77254903, 0.25882354, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.9607843, 0.77254903, 0.25882354, 1)
+theme_override_colors/font_disabled_color = Color(0.5764706, 0.46352944, 0.15529414, 1)
+theme_override_colors/font_outline_color = Color(1, 0.94509804, 0.8627451, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 44
+text = "Next"
+flat = true
+metadata/_editor_description_ = "Artwork: assign StyleBoxTexture in Theme Overrides > Styles for normal, hover, pressed, disabled and focus."
+
+[node name="PriceRow" type="HBoxContainer" parent="Center/ResultContent" unique_id=10724056]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="SellPriceLabel" type="Label" parent="Center/ResultContent/PriceRow" unique_id=24812984]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.94509804, 0.8627451, 1)
+theme_override_colors/font_outline_color = Color(0.41960785, 0.22745098, 0.078431375, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 28
+text = "Sell price"
+horizontal_alignment = 1
+
+[node name="SellPriceInput" type="SpinBox" parent="Center/ResultContent/PriceRow" unique_id=1292468804]
+custom_minimum_size = Vector2(210, 48)
+layout_mode = 2
+min_value = 1.0
+value = 1.0
+suffix = " G"
+
+[node name="SavePriceButton" type="Button" parent="Center/ResultContent" unique_id=1849202398]
+visible = false
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.9607843, 0.77254903, 0.25882354, 1)
+theme_override_colors/font_focus_color = Color(0.9607843, 0.77254903, 0.25882354, 1)
+theme_override_colors/font_pressed_color = Color(0.9607843, 0.77254903, 0.25882354, 1)
+theme_override_colors/font_hover_color = Color(0.9607843, 0.77254903, 0.25882354, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.9607843, 0.77254903, 0.25882354, 1)
+theme_override_colors/font_disabled_color = Color(0.5764706, 0.46352944, 0.15529414, 1)
+theme_override_colors/font_outline_color = Color(1, 0.94509804, 0.8627451, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 36
+text = "Set price"
+flat = true
+metadata/_editor_description_ = "Artwork: assign StyleBoxTexture in Theme Overrides > Styles for normal, hover, pressed, disabled and focus."

@@ -1,0 +1,644 @@
+[gd_scene format=3 uid="uid://cydpewcst5mrk"]
+
+[ext_resource type="Script" uid="uid://cckkobt8bin61" path="res://scripts/settings_book.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://diwxk6qaaipve" path="res://assets/UIs/bookuibig.png" id="2_book"]
+[ext_resource type="Theme" uid="uid://b2k3w4vhxu2i5" path="res://ui/settings/book_theme.tres" id="3_theme"]
+[ext_resource type="Shader" uid="uid://qbkqwpsieugo" path="res://ui/settings/backdrop_blur.gdshader" id="4_blur"]
+
+[sub_resource type="ShaderMaterial" id="Blur"]
+shader = ExtResource("4_blur")
+shader_parameter/blur_amount = 3.5
+shader_parameter/brightness = 0.8
+
+[node name="SettingsMenu" type="CanvasLayer" unique_id=84634209]
+process_mode = 3
+layer = 60
+script = ExtResource("1_script")
+
+[node name="Screen" type="Control" parent="." unique_id=1238062118]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("3_theme")
+
+[node name="BackdropBlur" type="ColorRect" parent="Screen" unique_id=1286623832]
+material = SubResource("Blur")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="BookFrame" type="AspectRatioContainer" parent="Screen" unique_id=1853792155]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 54.0
+offset_right = -20.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+ratio = 1.8398358
+
+[node name="Book" type="Control" parent="Screen/BookFrame" unique_id=956057648]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BookArtwork" type="TextureRect" parent="Screen/BookFrame/Book" unique_id=1688572413]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource("2_book")
+expand_mode = 1
+
+[node name="SettingsPages" type="Control" parent="Screen/BookFrame/Book" unique_id=514652646]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="GameplayPage" type="Control" parent="Screen/BookFrame/Book/SettingsPages" unique_id=1159088950]
+layout_mode = 1
+anchor_left = 0.102
+anchor_top = 0.13
+anchor_right = 0.475
+anchor_bottom = 0.86
+mouse_filter = 2
+
+[node name="GameplayHeading" type="Label" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage" unique_id=2101202833]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.12
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 34
+text = "Gameplay Setting"
+horizontal_alignment = 1
+
+[node name="SensitivityRow" type="HBoxContainer" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage" unique_id=979881833]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.187
+anchor_right = 0.84
+anchor_bottom = 0.267
+theme_override_constants/separation = 12
+
+[node name="SensitivityLabel" type="Label" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage/SensitivityRow" unique_id=1650140807]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Mouse Sensitivity"
+
+[node name="SensitivityValue" type="Label" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage/SensitivityRow" unique_id=2074339494]
+custom_minimum_size = Vector2(105, 0)
+layout_mode = 2
+text = "55 %"
+
+[node name="SensitivitySlider" type="HSlider" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage" unique_id=1498147217]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.276
+anchor_right = 1.0
+anchor_bottom = 0.328
+mouse_default_cursor_shape = 2
+min_value = 0.0005
+max_value = 0.008
+step = 2.5e-05
+value = 0.004625000000000001
+
+[node name="FullscreenRow" type="HBoxContainer" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage" unique_id=1676509116]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.35
+anchor_right = 1.0
+anchor_bottom = 0.445
+
+[node name="FullscreenRowLabel" type="Label" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage/FullscreenRow" unique_id=1018301114]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fullscreen"
+vertical_alignment = 1
+
+[node name="FullscreenToggle" type="CheckBox" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage/FullscreenRow" unique_id=1303110983]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+
+[node name="ClockColorRow" type="HBoxContainer" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage" unique_id=1343637391]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.46
+anchor_right = 1.0
+anchor_bottom = 0.555
+theme_override_constants/separation = 12
+
+[node name="ClockColorLabel" type="Label" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage/ClockColorRow" unique_id=1825803877]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Clock font colour"
+vertical_alignment = 1
+
+[node name="ClockColorSelector" type="OptionButton" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage/ClockColorRow" unique_id=2013982378]
+custom_minimum_size = Vector2(112, 32)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+selected = 0
+fit_to_longest_item = false
+item_count = 6
+popup/item_0/text = "White"
+popup/item_0/id = 0
+popup/item_1/text = "Cream"
+popup/item_1/id = 1
+popup/item_2/text = "Gold"
+popup/item_2/id = 2
+popup/item_3/text = "Brown"
+popup/item_3/id = 3
+popup/item_4/text = "Black"
+popup/item_4/id = 4
+popup/item_5/text = "Custom"
+popup/item_5/id = 5
+
+[node name="KeyMappingButton" type="Button" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage" unique_id=1288906441]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.59
+anchor_right = 0.7
+anchor_bottom = 0.68
+mouse_default_cursor_shape = 2
+text = "Key mapping  ›"
+alignment = 0
+
+[node name="Actions" type="HBoxContainer" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage" unique_id=1564437967]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.94
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/separation = 18
+
+[node name="MainMenuButton" type="Button" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage/Actions" unique_id=1104527772]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 18
+text = "Main menu"
+
+[node name="QuitButton" type="Button" parent="Screen/BookFrame/Book/SettingsPages/GameplayPage/Actions" unique_id=1628018206]
+visible = false
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 18
+text = "Exit game"
+
+[node name="SoundPage" type="Control" parent="Screen/BookFrame/Book/SettingsPages" unique_id=1703768642]
+layout_mode = 1
+anchor_left = 0.54
+anchor_top = 0.13
+anchor_right = 0.93
+anchor_bottom = 0.86
+mouse_filter = 2
+
+[node name="SoundHeading" type="Label" parent="Screen/BookFrame/Book/SettingsPages/SoundPage" unique_id=539448340]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.12
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 34
+text = "Sound options"
+horizontal_alignment = 1
+
+[node name="MasterRow" type="HBoxContainer" parent="Screen/BookFrame/Book/SettingsPages/SoundPage" unique_id=912096075]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.125
+anchor_right = 0.84
+anchor_bottom = 0.205
+theme_override_constants/separation = 12
+
+[node name="MasterLabel" type="Label" parent="Screen/BookFrame/Book/SettingsPages/SoundPage/MasterRow" unique_id=1885226683]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Volume"
+
+[node name="MasterValue" type="Label" parent="Screen/BookFrame/Book/SettingsPages/SoundPage/MasterRow" unique_id=1716835337]
+custom_minimum_size = Vector2(105, 0)
+layout_mode = 2
+text = "70 %"
+
+[node name="MasterSlider" type="HSlider" parent="Screen/BookFrame/Book/SettingsPages/SoundPage" unique_id=1850615056]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.218
+anchor_right = 1.0
+anchor_bottom = 0.27
+mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.01
+value = 0.7
+
+[node name="MusicRow" type="HBoxContainer" parent="Screen/BookFrame/Book/SettingsPages/SoundPage" unique_id=292297514]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.27
+anchor_right = 0.84
+anchor_bottom = 0.35
+theme_override_constants/separation = 12
+
+[node name="MusicLabel" type="Label" parent="Screen/BookFrame/Book/SettingsPages/SoundPage/MusicRow" unique_id=570080620]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Music Volume"
+
+[node name="MusicValue" type="Label" parent="Screen/BookFrame/Book/SettingsPages/SoundPage/MusicRow" unique_id=1441544869]
+custom_minimum_size = Vector2(105, 0)
+layout_mode = 2
+text = "35 %"
+
+[node name="MusicSlider" type="HSlider" parent="Screen/BookFrame/Book/SettingsPages/SoundPage" unique_id=1916683312]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.36
+anchor_right = 1.0
+anchor_bottom = 0.412
+mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.01
+value = 0.35
+
+[node name="SfxRow" type="HBoxContainer" parent="Screen/BookFrame/Book/SettingsPages/SoundPage" unique_id=590866308]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.43
+anchor_right = 0.84
+anchor_bottom = 0.51
+theme_override_constants/separation = 12
+
+[node name="SfxLabel" type="Label" parent="Screen/BookFrame/Book/SettingsPages/SoundPage/SfxRow" unique_id=1982016063]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sound effect Volume"
+
+[node name="SfxValue" type="Label" parent="Screen/BookFrame/Book/SettingsPages/SoundPage/SfxRow" unique_id=1493161924]
+custom_minimum_size = Vector2(105, 0)
+layout_mode = 2
+text = "10 %"
+
+[node name="SfxSlider" type="HSlider" parent="Screen/BookFrame/Book/SettingsPages/SoundPage" unique_id=1224753039]
+custom_minimum_size = Vector2(0, 22)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.51
+anchor_right = 1.0
+anchor_bottom = 0.562
+mouse_default_cursor_shape = 2
+max_value = 1.0
+step = 0.01
+value = 0.1
+
+[node name="MuteRow" type="HBoxContainer" parent="Screen/BookFrame/Book/SettingsPages/SoundPage" unique_id=565869143]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.655
+anchor_right = 1.0
+anchor_bottom = 0.75
+
+[node name="MuteRowLabel" type="Label" parent="Screen/BookFrame/Book/SettingsPages/SoundPage/MuteRow" unique_id=1463136871]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Mute"
+vertical_alignment = 1
+
+[node name="MuteToggle" type="CheckBox" parent="Screen/BookFrame/Book/SettingsPages/SoundPage/MuteRow" unique_id=1103181953]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+
+[node name="RadioNameRow" type="HBoxContainer" parent="Screen/BookFrame/Book/SettingsPages/SoundPage" unique_id=1693882961]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.805
+anchor_right = 1.0
+anchor_bottom = 0.945
+
+[node name="RadioNameRowLabel" type="Label" parent="Screen/BookFrame/Book/SettingsPages/SoundPage/RadioNameRow" unique_id=1735468494]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Show radio popup
+music name"
+vertical_alignment = 1
+
+[node name="RadioNameToggle" type="CheckBox" parent="Screen/BookFrame/Book/SettingsPages/SoundPage/RadioNameRow" unique_id=306996665]
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+button_pressed = true
+
+[node name="KeyMappingPage" type="Control" parent="Screen/BookFrame/Book" unique_id=1579654422]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="MovementHeading" type="Label" parent="Screen/BookFrame/Book/KeyMappingPage" unique_id=1782059970]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.077
+anchor_top = 0.13
+anchor_right = 0.475
+anchor_bottom = 0.22
+theme_override_font_sizes/font_size = 34
+text = "Key mapping"
+horizontal_alignment = 1
+
+[node name="ShopActionsHeading" type="Label" parent="Screen/BookFrame/Book/KeyMappingPage" unique_id=109868736]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.527
+anchor_top = 0.13
+anchor_right = 0.93
+anchor_bottom = 0.22
+theme_override_font_sizes/font_size = 34
+text = "Shop actions"
+horizontal_alignment = 1
+
+[node name="MovementKeys" type="VBoxContainer" parent="Screen/BookFrame/Book/KeyMappingPage" unique_id=1089136099]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.085
+anchor_top = 0.26
+anchor_right = 0.465
+anchor_bottom = 0.71
+theme_override_constants/separation = 12
+
+[node name="MoveForwardRow" type="HBoxContainer" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys" unique_id=403880918]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="MoveForwardLabel" type="Label" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys/MoveForwardRow" unique_id=384352953]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Walk forward"
+
+[node name="MoveForwardKey" type="Button" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys/MoveForwardRow" unique_id=1885455838]
+custom_minimum_size = Vector2(125, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 20
+text = "W"
+
+[node name="MoveBackRow" type="HBoxContainer" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys" unique_id=1350095406]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="MoveBackLabel" type="Label" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys/MoveBackRow" unique_id=1243033810]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Walk backward"
+
+[node name="MoveBackKey" type="Button" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys/MoveBackRow" unique_id=1291095101]
+custom_minimum_size = Vector2(125, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 20
+text = "S"
+
+[node name="MoveLeftRow" type="HBoxContainer" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys" unique_id=934660675]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="MoveLeftLabel" type="Label" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys/MoveLeftRow" unique_id=102123972]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Walk left"
+
+[node name="MoveLeftKey" type="Button" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys/MoveLeftRow" unique_id=860991944]
+custom_minimum_size = Vector2(125, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 20
+text = "A"
+
+[node name="MoveRightRow" type="HBoxContainer" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys" unique_id=237762684]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="MoveRightLabel" type="Label" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys/MoveRightRow" unique_id=122956191]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Walk right"
+
+[node name="MoveRightKey" type="Button" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys/MoveRightRow" unique_id=2124451732]
+custom_minimum_size = Vector2(125, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 20
+text = "D"
+
+[node name="SprintRow" type="HBoxContainer" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys" unique_id=1162013450]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="SprintLabel" type="Label" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys/SprintRow" unique_id=144908703]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Run (hold)"
+
+[node name="SprintKey" type="Button" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys/SprintRow" unique_id=493439435]
+custom_minimum_size = Vector2(125, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 20
+text = "Shift"
+
+[node name="CrouchRow" type="HBoxContainer" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys" unique_id=1248034920]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CrouchLabel" type="Label" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys/CrouchRow" unique_id=46443736]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Crouch (hold)"
+
+[node name="CrouchKey" type="Button" parent="Screen/BookFrame/Book/KeyMappingPage/MovementKeys/CrouchRow" unique_id=1046375210]
+custom_minimum_size = Vector2(125, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 20
+text = "C / Ctrl"
+
+[node name="ShopKeys" type="VBoxContainer" parent="Screen/BookFrame/Book/KeyMappingPage" unique_id=294765251]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.535
+anchor_top = 0.26
+anchor_right = 0.92
+anchor_bottom = 0.71
+theme_override_constants/separation = 12
+
+[node name="InteractRow" type="HBoxContainer" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys" unique_id=1816905547]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="InteractLabel" type="Label" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys/InteractRow" unique_id=955247063]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Interact / place"
+
+[node name="InteractKey" type="Button" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys/InteractRow" unique_id=998035509]
+custom_minimum_size = Vector2(125, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 20
+text = "E"
+
+[node name="InventoryRow" type="HBoxContainer" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys" unique_id=1281744777]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="InventoryLabel" type="Label" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys/InventoryRow" unique_id=490153494]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Stock / set prices"
+
+[node name="InventoryKey" type="Button" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys/InventoryRow" unique_id=150602584]
+custom_minimum_size = Vector2(125, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 20
+text = "I"
+
+[node name="ShopRow" type="HBoxContainer" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys" unique_id=933831912]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ShopLabel" type="Label" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys/ShopRow" unique_id=192122795]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Buy shop items"
+
+[node name="ShopKey" type="Button" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys/ShopRow" unique_id=856361575]
+custom_minimum_size = Vector2(125, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 20
+text = "B"
+
+[node name="RotateItemRow" type="HBoxContainer" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys" unique_id=1289215939]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="RotateItemLabel" type="Label" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys/RotateItemRow" unique_id=798446434]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Rotate held artifact"
+
+[node name="RotateItemKey" type="Button" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys/RotateItemRow" unique_id=1748748708]
+custom_minimum_size = Vector2(125, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 20
+text = "R"
+
+[node name="ToggleHudRow" type="HBoxContainer" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys" unique_id=568213107]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ToggleHudLabel" type="Label" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys/ToggleHudRow" unique_id=399385245]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Show / hide HUD"
+
+[node name="ToggleHudKey" type="Button" parent="Screen/BookFrame/Book/KeyMappingPage/ShopKeys/ToggleHudRow" unique_id=821137053]
+custom_minimum_size = Vector2(125, 28)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 20
+text = "Tab"
+
+[node name="BindingHint" type="Label" parent="Screen/BookFrame/Book/KeyMappingPage" unique_id=250229099]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.085
+anchor_top = 0.75
+anchor_right = 0.465
+anchor_bottom = 0.83
+theme_override_font_sizes/font_size = 17
+text = "Select a key to change it. Esc returns to settings."
+autowrap_mode = 3
+
+[node name="BackSettingsButton" type="Button" parent="Screen/BookFrame/Book/KeyMappingPage" unique_id=469496389]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.085
+anchor_top = 0.845
+anchor_right = 0.4
+anchor_bottom = 0.905
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 22
+text = "‹  Back to settings"
+alignment = 0
+
+[node name="ResetKeysButton" type="Button" parent="Screen/BookFrame/Book/KeyMappingPage" unique_id=1939279442]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.54
+anchor_top = 0.8
+anchor_right = 0.92
+anchor_bottom = 0.87
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 22
+text = "Restore default keys"
+
+[node name="ResumeButton" type="Button" parent="Screen" unique_id=36900172]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 15.0
+offset_right = 111.0
+offset_bottom = 56.0
+tooltip_text = "Close settings / resume game"
+mouse_default_cursor_shape = 2
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Setting"
+alignment = 0
+
+[node name="Heading" type="Label" parent="Screen" unique_id=462233331]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 56.0
+offset_right = 231.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 23
+text = "Game pause"
+
+[node name="ClockColorPicker" type="ColorPickerButton" parent="Screen" unique_id=1681616359]
+visible = false
+layout_mode = 0
+offset_left = 520.0
+offset_top = 220.0
+offset_right = 570.0
+offset_bottom = 260.0
+edit_alpha = false

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://blpo7f1giyt5i"]
+
+[ext_resource type="Script" uid="uid://c41ddm0wldm52" path="res://parallax_menu.gd" id="1_ee4bf"]
+[ext_resource type="Texture2D" uid="uid://ddx1ahtp6sbh5" path="res://assets/01_far_landscape.png" id="2_kbped"]
+[ext_resource type="Texture2D" uid="uid://6h4bqaac8q6a" path="res://assets/02_town_and_lake.png" id="3_fj5cn"]
+[ext_resource type="Texture2D" uid="uid://psu2edwjslrc" path="res://assets/03_shop_foreground.png" id="4_iy58a"]
+
+[node name="Control" type="Node2D" unique_id=1883905806]
+
+[node name="ParallaxMenu" type="Node2D" parent="." unique_id=202081565]
+script = ExtResource("1_ee4bf")
+
+[node name="Parallax2D_BG" type="Parallax2D" parent="ParallaxMenu" unique_id=164454537]
+
+[node name="LayerBack" type="Sprite2D" parent="ParallaxMenu/Parallax2D_BG" unique_id=1346366115]
+scale = Vector2(0.699, 0.699)
+texture = ExtResource("2_kbped")
+
+[node name="Parallax2D_Mid" type="Parallax2D" parent="ParallaxMenu" unique_id=1885619045]
+scale = Vector2(1.0457926, 1.0457926)
+scroll_offset = Vector2(0, 115.99999)
+
+[node name="LayerMid" type="Sprite2D" parent="ParallaxMenu/Parallax2D_Mid" unique_id=590288982]
+scale = Vector2(0.68739873, 0.68739873)
+texture = ExtResource("3_fj5cn")
+
+[node name="Parallax2D_Fore" type="Parallax2D" parent="ParallaxMenu" unique_id=88552363]
+
+[node name="LayerFront" type="Sprite2D" parent="ParallaxMenu/Parallax2D_Fore" unique_id=934333180]
+scale = Vector2(0.73414075, 0.73414075)
+texture = ExtResource("4_iy58a")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1074370324]

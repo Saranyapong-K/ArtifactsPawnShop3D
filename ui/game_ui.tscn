@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://crjdxm4pj1yv2"]
+
+[ext_resource type="Texture2D" uid="uid://nhe0dvh1sccl" path="res://assets/UIs/BookUi.png" id="book"]
+[ext_resource type="PackedScene" uid="uid://bdlgr4ju1oo3e" path="res://ui/game_over_menu.tscn" id="over"]
+[ext_resource type="Script" uid="uid://cu1ww613r2fyy" path="res://scripts/game_ui.gd" id="script"]
+[ext_resource type="PackedScene" uid="uid://dql4kdyxv414f" path="res://ui/shop_menu.tscn" id="shop"]
+[ext_resource type="PackedScene" uid="uid://bmwa2ko0y410p" path="res://ui/stock_menu.tscn" id="stock"]
+[ext_resource type="Theme" uid="uid://drni50yawynbe" path="res://ui/autumn_theme.tres" id="theme"]
+
+[node name="GameUI" type="CanvasLayer" unique_id=939695024]
+layer = 12
+script = ExtResource("script")
+
+[node name="Screen" type="Control" parent="." unique_id=1478847798]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("theme")
+
+[node name="Toast" type="Label" parent="Screen" unique_id=1416642537]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.28
+anchor_top = 0.025
+anchor_right = 0.98
+anchor_bottom = 0.17
+theme_override_font_sizes/font_size = 21
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ControlHint" type="Label" parent="Screen" unique_id=1408717295]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.959
+anchor_right = 0.99
+anchor_bottom = 0.998
+theme_override_font_sizes/font_size = 13
+text = "WASD Move · E Interact · I Stock · B Shop · ESC Pause"
+
+[node name="ScreenTint" type="ColorRect" parent="Screen" unique_id=1177381522]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.1, 0.06, 0.03, 0.38)
+
+[node name="Modal" type="Control" parent="Screen" unique_id=1071089773]
+anchors_preset = 0
+offset_left = 28.0
+offset_top = 16.0
+offset_right = 1124.0
+offset_bottom = 632.0
+
+[node name="GameOverBackdrop" type="TextureRect" parent="Screen/Modal" unique_id=1910951963]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource("book")
+expand_mode = 1
+
+[node name="Pages" type="Control" parent="Screen/Modal" unique_id=1440184780]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StockMenu" parent="Screen/Modal/Pages" unique_id=2128303476 instance=ExtResource("stock")]
+layout_mode = 1
+
+[node name="ShopMenu" parent="Screen/Modal/Pages" unique_id=1440902971 instance=ExtResource("shop")]
+visible = false
+layout_mode = 1
+
+[node name="GameOverMenu" parent="Screen/Modal/Pages" unique_id=1384483865 instance=ExtResource("over")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.095
+anchor_top = 0.15
+anchor_right = 0.905
+anchor_bottom = 0.795

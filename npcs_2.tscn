@@ -5,6 +5,7 @@
 
 [node name="NPCS2" unique_id=1105241655 instance=ExtResource("1_er7oh")]
 script = ExtResource("2_doqgn")
+target_height = 1.65
 
 [node name="Skeleton3D" parent="metarig" parent_id_path=PackedInt32Array(2142030399) index="0" unique_id=2054735185]
 bones/4/rotation = Quaternion(-0.042511754, -1.19101514e-07, -5.067796e-09, 0.999096)

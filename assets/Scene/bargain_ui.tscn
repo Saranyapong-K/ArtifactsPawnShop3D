@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://dfx36hxgjjl73"]
+
+[ext_resource type="Script" uid="uid://dvdxutcacopso" path="res://bargain_ui.gd" id="1_0qqrg"]
+
+[node name="BargainUI" type="CanvasLayer" unique_id=318316971]
+layer = 10
+script = ExtResource("1_0qqrg")
+
+[node name="BargainPanel" type="PanelContainer" parent="." unique_id=1103783739]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 216)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Content" type="VBoxContainer" parent="BargainPanel" unique_id=2086091865]
+layout_mode = 2
+alignment = 1
+
+[node name="AskLabel" type="Label" parent="BargainPanel/Content" unique_id=1775243494]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Ask for: 0 G "
+
+[node name="MarketLabel" type="Label" parent="BargainPanel/Content" unique_id=2135154515]
+unique_name_in_owner = true
+layout_mode = 2
+text = "market ≈ 0"
+
+[node name="OfferRow" type="HBoxContainer" parent="BargainPanel/Content" unique_id=507402040]
+layout_mode = 2
+
+[node name="Nudge100Minus" type="Button" parent="BargainPanel/Content/OfferRow" unique_id=1923775446]
+unique_name_in_owner = true
+layout_mode = 2
+text = "-100"
+
+[node name="Nudge10Minus" type="Button" parent="BargainPanel/Content/OfferRow" unique_id=1473301058]
+unique_name_in_owner = true
+layout_mode = 2
+text = "-10"
+
+[node name="OffeerValue" type="Label" parent="BargainPanel/Content/OfferRow" unique_id=153999777]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Your Offer: 0"
+
+[node name="Nudge10Plus" type="Button" parent="BargainPanel/Content/OfferRow" unique_id=494088488]
+unique_name_in_owner = true
+layout_mode = 2
+text = "+10"
+
+[node name="Nudge100Plus" type="Button" parent="BargainPanel/Content/OfferRow" unique_id=396732541]
+unique_name_in_owner = true
+layout_mode = 2
+text = "+100"
+
+[node name="OfferSlider" type="HSlider" parent="BargainPanel/Content" unique_id=1196812499]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ActionRow" type="HBoxContainer" parent="BargainPanel/Content" unique_id=370032743]
+layout_mode = 2
+
+[node name="OfferButton" type="Button" parent="BargainPanel/Content/ActionRow" unique_id=1534406976]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Offer"
+
+[node name="AcceptButton2" type="Button" parent="BargainPanel/Content/ActionRow" unique_id=1337359636]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Accept
+"
+
+[node name="RejectButton3" type="Button" parent="BargainPanel/Content/ActionRow" unique_id=1959665837]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Reject"
+
+[node name="HideButton" type="Button" parent="." unique_id=543938172]
+unique_name_in_owner = true
+offset_left = 548.0
+offset_top = 596.0
+offset_right = 592.0
+offset_bottom = 632.0
+text = "▼"
+
+[node name="DialoguePanel" type="PanelContainer" parent="." unique_id=994378210]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 120)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DialogueLabel" type="Label" parent="DialoguePanel" unique_id=1716427914]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+horizontal_alignment = 1
+
+[node name="AdvanceArrow" type="Label" parent="DialoguePanel" unique_id=1831571023]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "▶"
+horizontal_alignment = 1
+
+[node name="RevealOverlay" type="ColorRect" parent="." unique_id=434652093]
+offset_right = 40.0
+offset_bottom = 40.0

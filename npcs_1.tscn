@@ -7,6 +7,7 @@
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
 script = ExtResource("2_b02xn")
 prompt_height = 2.5
+target_height = 1.65
 
 [node name="Skeleton3D" parent="metarig" parent_id_path=PackedInt32Array(1145342397) index="0" unique_id=807072295]
 bones/4/rotation = Quaternion(-0.042511754, -1.19101514e-07, -5.067796e-09, 0.999096)

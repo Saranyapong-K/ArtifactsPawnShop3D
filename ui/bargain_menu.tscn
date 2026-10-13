@@ -1,0 +1,225 @@
+[gd_scene format=3 uid="uid://cmc4686ahl42x"]
+
+[ext_resource type="Texture2D" uid="uid://nhe0dvh1sccl" path="res://assets/UIs/BookUi.png" id="book"]
+[ext_resource type="Texture2D" uid="uid://ceh8hnmr7pbq2" path="res://assets/UIs/iconCurseDetectorUi.png" id="curse"]
+[ext_resource type="Texture2D" uid="uid://spl01p8uen0r" path="res://assets/UIs/iconMagnifyingGlassesUi.png" id="mag"]
+[ext_resource type="Theme" uid="uid://drni50yawynbe" path="res://ui/autumn_theme.tres" id="theme"]
+
+[sub_resource type="FontVariation" id="FontVariation_k4wja"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u28yg"]
+
+[node name="BargainMenu" type="Control" unique_id=891402493]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("theme")
+
+[node name="BargainPanel" type="Control" parent="." unique_id=1308938051]
+layout_mode = 1
+anchor_left = 0.18
+anchor_top = 0.47
+anchor_right = 0.82
+anchor_bottom = 0.98
+mouse_filter = 2
+
+[node name="PanelArtwork" type="TextureRect" parent="BargainPanel" unique_id=24398923]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("book")
+expand_mode = 1
+
+[node name="BargainContent" type="Control" parent="BargainPanel" unique_id=752086993]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AskingPrice" type="Label" parent="BargainPanel/BargainContent" unique_id=895438989]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -245.00002
+offset_top = -125.92001
+offset_right = 240.0
+offset_bottom = -82.92001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.5254902, 0.27450982, 0.101960786, 1)
+theme_override_constants/outline_size = 11
+theme_override_fonts/font = SubResource("FontVariation_k4wja")
+theme_override_font_sizes/font_size = 37
+text = "Customer's asking price: 67 G"
+horizontal_alignment = 1
+
+[node name="ReferencePrice" type="Label" parent="BargainPanel/BargainContent" unique_id=2012396323]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12
+anchor_top = 0.28
+anchor_right = 0.88
+anchor_bottom = 0.35
+offset_left = 2.1663818
+offset_top = -5.68161
+offset_right = 2.1663818
+offset_bottom = -5.68161
+theme_override_colors/font_color = Color(0.5254902, 0.27450982, 0.101960786, 1)
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 19
+text = "Market price: 80 G"
+horizontal_alignment = 1
+
+[node name="OfferControls" type="HBoxContainer" parent="BargainPanel/BargainContent" unique_id=2006581971]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -231.00003
+offset_top = -43.920013
+offset_right = 227.0
+offset_bottom = -16.920013
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="Minus100Button" type="Button" parent="BargainPanel/BargainContent/OfferControls" unique_id=42131513]
+custom_minimum_size = Vector2(62, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxTexture_u28yg")
+text = "-100"
+
+[node name="Minus10Button" type="Button" parent="BargainPanel/BargainContent/OfferControls" unique_id=762827971]
+custom_minimum_size = Vector2(62, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 23
+text = "-10"
+
+[node name="OfferPrice" type="Label" parent="BargainPanel/BargainContent/OfferControls" unique_id=1083813325]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_outline_color = Color(0.5254902, 0.27450982, 0.101960786, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 33
+text = "Your offer: 90 G"
+horizontal_alignment = 1
+
+[node name="Plus10Button" type="Button" parent="BargainPanel/BargainContent/OfferControls" unique_id=1750194981]
+custom_minimum_size = Vector2(62, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 23
+text = "+10"
+
+[node name="Plus100Button" type="Button" parent="BargainPanel/BargainContent/OfferControls" unique_id=248895610]
+custom_minimum_size = Vector2(62, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 23
+text = "+100"
+
+[node name="OfferSlider" type="HSlider" parent="BargainPanel/BargainContent" unique_id=1053119463]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07
+anchor_top = 0.54
+anchor_right = 0.93
+anchor_bottom = 0.58
+offset_left = 20.030396
+offset_top = 0.49121094
+offset_right = 20.030396
+offset_bottom = 5.90242
+scale = Vector2(0.9410504, 1.1119082)
+max_value = 200.0
+value = 91.0
+
+[node name="OfferButton" type="Button" parent="BargainPanel/BargainContent" unique_id=1359441522]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.075
+anchor_top = 0.635
+anchor_right = 0.315
+anchor_bottom = 0.805
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"Offer"
+text = "Offer"
+
+[node name="AcceptButton" type="Button" parent="BargainPanel/BargainContent" unique_id=169940310]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.38
+anchor_top = 0.635
+anchor_right = 0.62
+anchor_bottom = 0.805
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"Accept"
+text = "Accept"
+
+[node name="RejectButton" type="Button" parent="BargainPanel/BargainContent" unique_id=100247555]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.685
+anchor_top = 0.635
+anchor_right = 0.925
+anchor_bottom = 0.805
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+mouse_default_cursor_shape = 2
+theme_type_variation = &"Reject"
+text = "Reject"
+
+[node name="InspectDamageButton" type="Button" parent="BargainPanel/BargainContent" unique_id=1389344699]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08
+anchor_top = 0.315
+anchor_right = 0.13
+anchor_bottom = 0.405
+tooltip_text = "Use magnifying glass to inspect damage"
+mouse_default_cursor_shape = 2
+icon = ExtResource("mag")
+expand_icon = true
+
+[node name="InspectCurseButton" type="Button" parent="BargainPanel/BargainContent" unique_id=455021583]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.315
+anchor_right = 0.2
+anchor_bottom = 0.405
+tooltip_text = "Use curse detector to inspect this artifact"
+mouse_default_cursor_shape = 2
+icon = ExtResource("curse")
+expand_icon = true

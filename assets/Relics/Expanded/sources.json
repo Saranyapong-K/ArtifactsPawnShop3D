@@ -1,0 +1,426 @@
+{
+  "source_folder_url": "https://drive.google.com/drive/folders/1RfdutKautBEgl08ZuvS_kAdzZsJwyReb",
+  "footprint_note": "Per-model footprints in scripts/data/artifact_catalog.json are provisional implementation defaults based on the supplied models, within the user-selected size categories. Rotated 1x3 weapons use 3x1. Abilities are deferred.",
+  "files": [
+	{
+	  "file_name": "artifact_staff.glb",
+	  "source_url": "https://drive.google.com/file/d/118Y_ktUCs_LKQwm-h0IsBQEJs9lfLvBu/view?usp=drivesdk",
+	  "version": "v1",
+	  "size_bytes": 17804,
+	  "sha256": "1679d96f25fe458c008cbfa3da628b70cc7a10a92fa6704a66d5d312d70b0096",
+	  "local_extent": [
+		0.114,
+		0.662,
+		0.067
+	  ]
+	},
+	{
+	  "file_name": "artifact_amulet.glb",
+	  "source_url": "https://drive.google.com/file/d/1jybvU50jx64dRlgIWf9mvY2UtG5v1rES/view?usp=drivesdk",
+	  "version": "v1",
+	  "size_bytes": 15808,
+	  "sha256": "3354e482a3bd1d22cab44591c1d14392ad4e44a637421d982a91905d080a9146",
+	  "local_extent": [
+		0.166,
+		0.021,
+		0.213
+	  ]
+	},
+	{
+	  "file_name": "artifact_crystal_ball.glb",
+	  "source_url": "https://drive.google.com/file/d/1ygFx60U_EokulhrAo_T61KkWmf-qvs8d/view?usp=drivesdk",
+	  "version": "v1",
+	  "size_bytes": 22740,
+	  "sha256": "afc10038e0c83bb4b547c5c73fb68979435029d6eb0df0f6c464b2969d38967c",
+	  "local_extent": [
+		0.19,
+		0.22,
+		0.19
+	  ]
+	},
+	{
+	  "file_name": "artifact_scroll.glb",
+	  "source_url": "https://drive.google.com/file/d/1j8Dpi2a-glRKhGtRc28cWL9KX2_petN-/view?usp=drivesdk",
+	  "version": "v1",
+	  "size_bytes": 9596,
+	  "sha256": "6190f5c1ea5ead2ce200b1b256dfeac8a909b5f545d2225b6dc3dbc4f939cc96",
+	  "local_extent": [
+		0.07,
+		0.07,
+		0.325
+	  ]
+	},
+	{
+	  "file_name": "artifact_spellbook.glb",
+	  "source_url": "https://drive.google.com/file/d/1vEHWHniNFkKAx45aS-XHMKW2IJVhbgLH/view?usp=drivesdk",
+	  "version": "v1",
+	  "size_bytes": 13188,
+	  "sha256": "77ecf05f23caa1023376f7c5ebc32a3694056f35892f9170bf21db3dccf9c058",
+	  "local_extent": [
+		0.212,
+		0.062,
+		0.28
+	  ]
+	},
+	{
+	  "file_name": "artifact_goblet.glb",
+	  "source_url": "https://drive.google.com/file/d/1yTfh7mzfXOS-EYX_GTwN43exrwUnjIPC/view?usp=drivesdk",
+	  "version": "v1",
+	  "size_bytes": 11876,
+	  "sha256": "571c5297a1244db232ca5f4aede8bc7fbbbeaaf0b8fe8709399f684034a8ae96",
+	  "local_extent": [
+		0.11,
+		0.18,
+		0.11
+	  ]
+	},
+	{
+	  "file_name": "artifact_ring.glb",
+	  "source_url": "https://drive.google.com/file/d/1ZE7o0pXQEw2-N4c0Zku3weXlkgRlQZdb/view?usp=drivesdk",
+	  "version": "v1",
+	  "size_bytes": 14060,
+	  "sha256": "7d5ddd2040a2a25090c89e7bc64935b1438eed694a8152fecef15aeb27991da8",
+	  "local_extent": [
+		0.062,
+		0.076,
+		0.019
+	  ]
+	},
+	{
+	  "file_name": "artifact_crown.glb",
+	  "source_url": "https://drive.google.com/file/d/1PlzOeQQNwF4iF8FDqIGdXZ8QU5c-RzFM/view?usp=drivesdk",
+	  "version": "v1",
+	  "size_bytes": 35652,
+	  "sha256": "a4b863ca0b8830bd9b2c4ad9617686d71a8dca8b63380f8a9f0b108df5205c65",
+	  "local_extent": [
+		0.212,
+		0.14,
+		0.214
+	  ]
+	},
+	{
+	  "file_name": "artifact_potion.glb",
+	  "source_url": "https://drive.google.com/file/d/1v43_iHCxIUz1m_4fY_Sb8Z_UfZS6Rv2y/view?usp=drivesdk",
+	  "version": "v1",
+	  "size_bytes": 11296,
+	  "sha256": "b04ab5c30e8fe3a7fc8b2afbbbce87868d58004b41a5bb967ecaeea40449e97c",
+	  "local_extent": [
+		0.114,
+		0.215,
+		0.114
+	  ]
+	},
+	{
+	  "file_name": "artifact_sword.glb",
+	  "source_url": "https://drive.google.com/file/d/1YZuBUf9LlCUyWOrgWd17v-2AilYfkKxd/view?usp=drivesdk",
+	  "version": "v1",
+	  "size_bytes": 18664,
+	  "sha256": "fc348413e17c8bfb07ce8b3601e9f1e1aae79d0212b4d59dd0f5489edc8ccbd4",
+	  "local_extent": [
+		0.864,
+		0.052,
+		0.22
+	  ]
+	},
+	{
+	  "file_name": "long_warhammer.glb",
+	  "source_url": "https://drive.google.com/file/d/1TJggCi9jBJ00SHd9_IhNTHfvuK00oJa2/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 15532,
+	  "sha256": "27646438278b6071707d87f89b9f038499f7afce26271ee070cfb20b1b57abb8",
+	  "local_extent": [
+		0.9,
+		0.14,
+		0.138
+	  ]
+	},
+	{
+	  "file_name": "long_bow.glb",
+	  "source_url": "https://drive.google.com/file/d/1DHwX1cgCCVc0oYThGhAf_ER7w1pMJm9d/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 19700,
+	  "sha256": "8836e7cb5c5b23ebf116bc606fc0d39c3fbcfd27305c6dc71a39ecc7a6879758",
+	  "local_extent": [
+		0.9,
+		0.029,
+		0.087
+	  ]
+	},
+	{
+	  "file_name": "long_spear.glb",
+	  "source_url": "https://drive.google.com/file/d/1kZ-SgNJ8PSoz6FaQp068Xs7Xv8LPEJkI/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 13848,
+	  "sha256": "3091f4f7cc18c2b5e3d57d4821b5ead3917066bca59bf8c5b1858dcec189a51a",
+	  "local_extent": [
+		0.9,
+		0.058,
+		0.082
+	  ]
+	},
+	{
+	  "file_name": "long_axe.glb",
+	  "source_url": "https://drive.google.com/file/d/1k6ok4CMnianDtkt8zeixdCtglTwrmJlk/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 14712,
+	  "sha256": "a5c5e173a7f1086e99bc1251e0846d70323a526cfc550c8e420cd8d21bd16123",
+	  "local_extent": [
+		0.9,
+		0.034,
+		0.147
+	  ]
+	},
+	{
+	  "file_name": "std_mirror.glb",
+	  "source_url": "https://drive.google.com/file/d/131uLv4qibK0Kx00Tji3Gk-tZk6NS-u84/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 17968,
+	  "sha256": "198ec7dac841b871bcf705a2d7999fa131930bfbcd236e9feda91cf92a582c26",
+	  "local_extent": [
+		0.224,
+		0.35,
+		0.16
+	  ]
+	},
+	{
+	  "file_name": "std_candelabra.glb",
+	  "source_url": "https://drive.google.com/file/d/1MykCn7VUUO449F2nr0_FoMIquHMAW9GO/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 17136,
+	  "sha256": "9ab107375602bb728501f22f2112c766c036a36a11032d95579cc7d5ce73c9af",
+	  "local_extent": [
+		0.282,
+		0.35,
+		0.118
+	  ]
+	},
+	{
+	  "file_name": "std_rune_tablet.glb",
+	  "source_url": "https://drive.google.com/file/d/1bflkY_YbB3gtlorzFxFrYuCi2xKEue7s/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 7352,
+	  "sha256": "1daca0bcd27416490c56cff6c42a813d394f44ed546eff3f2e766f46bc677e89",
+	  "local_extent": [
+		0.26,
+		0.31,
+		0.14
+	  ]
+	},
+	{
+	  "file_name": "std_idol.glb",
+	  "source_url": "https://drive.google.com/file/d/1EaLN9k0WHZRsJQBnDcScK-DSV9FKR_H0/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 19324,
+	  "sha256": "807ad5a38becbc3857b9b2580cd49313f607d3f06ccd9de6bc938ef1b86aad4c",
+	  "local_extent": [
+		0.18,
+		0.33,
+		0.16
+	  ]
+	},
+	{
+	  "file_name": "std_cauldron.glb",
+	  "source_url": "https://drive.google.com/file/d/1cmSZ8PyR973attYg8eUXmH0Wa8f31PIx/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 19572,
+	  "sha256": "9acac4adc32c633f800578c1e26da4f2c88e9cd1ed84a9c3268421119ed75c10",
+	  "local_extent": [
+		0.264,
+		0.24,
+		0.264
+	  ]
+	},
+	{
+	  "file_name": "std_hourglass.glb",
+	  "source_url": "https://drive.google.com/file/d/1McV-sXZw7_NnTedlUySzHkt29vKyMDa0/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 17732,
+	  "sha256": "6f17b97380b091cd22b3da76baeaf25cdd4fc02113e20466db1256f4e08c7321",
+	  "local_extent": [
+		0.14,
+		0.28,
+		0.14
+	  ]
+	},
+	{
+	  "file_name": "std_skull.glb",
+	  "source_url": "https://drive.google.com/file/d/1VbmLHb2--BXuH32KdzqHoBGuBZkBi1PE/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 33408,
+	  "sha256": "b1657fc7463172a227b7526ac662d4a2075bf0f821c19270adee5746b6c08fde",
+	  "local_extent": [
+		0.19,
+		0.255,
+		0.22
+	  ]
+	},
+	{
+	  "file_name": "std_lantern.glb",
+	  "source_url": "https://drive.google.com/file/d/1oI9oXqcaXaQrpCW0HpJPGKxGuVmDIgKF/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 21072,
+	  "sha256": "c1c78712179bb72f262b00c7c97d1c5b5d3dd6ca6beeeb2303c7174d5aff0db2",
+	  "local_extent": [
+		0.16,
+		0.335,
+		0.16
+	  ]
+	},
+	{
+	  "file_name": "std_shield.glb",
+	  "source_url": "https://drive.google.com/file/d/1uqagVFS3FfMJWGT0AZPnfSx74v40YFJA/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 20832,
+	  "sha256": "f50b36c2ce47f56f8aa54fee4b5cb05cfd74c366aa8ca1ada089622c37bc461f",
+	  "local_extent": [
+		0.3,
+		0.332,
+		0.099
+	  ]
+	},
+	{
+	  "file_name": "std_helmet.glb",
+	  "source_url": "https://drive.google.com/file/d/1_DWhamwpboUaw3dEehq22Dd1H7P6I-1V/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 14268,
+	  "sha256": "397df449d6d07126f48258388d64d0abee77e97fc5eb44846b926536769892e3",
+	  "local_extent": [
+		0.209,
+		0.34,
+		0.239
+	  ]
+	},
+	{
+	  "file_name": "std_chest.glb",
+	  "source_url": "https://drive.google.com/file/d/1O9w1uOIDR7ExV2glGVwF1Vp9pdX-Qf0o/view?usp=drivesdk",
+	  "version": "v2",
+	  "size_bytes": 10592,
+	  "sha256": "4edda317c00b2b5a9d1036b5a4ff4e04fbe6913db904388c1b14c7697d4c0ff0",
+	  "local_extent": [
+		0.28,
+		0.215,
+		0.196
+	  ]
+	},
+	{
+	  "file_name": "long_morning_star.glb",
+	  "source_url": "https://drive.google.com/file/d/1KW23LaYVaWg3tteeIMohzthFFq1NERsj/view?usp=drivesdk",
+	  "version": "v3",
+	  "size_bytes": 20540,
+	  "sha256": "98408710b87cd661605645ebe448e4e662a52b6249d50933c05b2b23a77c7329",
+	  "local_extent": [
+		0.9,
+		0.116,
+		0.138
+	  ]
+	},
+	{
+	  "file_name": "long_wizard_staff.glb",
+	  "source_url": "https://drive.google.com/file/d/1u3jhfrcII6CF3UW0CEqIedQlXfSrwjjt/view?usp=drivesdk",
+	  "version": "v3",
+	  "size_bytes": 19900,
+	  "sha256": "147afdfe2cfd670b97cd29928ccb743363a104535d18fe9511a06694df2bafad",
+	  "local_extent": [
+		0.9,
+		0.116,
+		0.071
+	  ]
+	},
+	{
+	  "file_name": "long_longsword.glb",
+	  "source_url": "https://drive.google.com/file/d/1s-uB9o5clckEBalH71wBItcXdFuCrNpL/view?usp=drivesdk",
+	  "version": "v3",
+	  "size_bytes": 17208,
+	  "sha256": "fb9c7944fc0b490b807e607186496fba142e5fde96447357b9e54c58c0a1eacd",
+	  "local_extent": [
+		0.9,
+		0.049,
+		0.137
+	  ]
+	},
+	{
+	  "file_name": "std_potion_tray.glb",
+	  "source_url": "https://drive.google.com/file/d/19SmvtS3OZE8x4di9nu7-caT2wbrO7xBw/view?usp=drivesdk",
+	  "version": "v3",
+	  "size_bytes": 32028,
+	  "sha256": "100f977e2b0c78350a16a746c7073bebe3a0fe7522957f4fae6408082cd39b85",
+	  "local_extent": [
+		0.3,
+		0.24,
+		0.2
+	  ]
+	},
+	{
+	  "file_name": "std_plague_mask.glb",
+	  "source_url": "https://drive.google.com/file/d/1UKCWG19KSCfowD_CzSU6XCTDV2YzBr68/view?usp=drivesdk",
+	  "version": "v3",
+	  "size_bytes": 25168,
+	  "sha256": "31781ed0c3da4b97a6c745da1347013ebfc5cb64aaca71845bcf6ee3c7f81bea",
+	  "local_extent": [
+		0.218,
+		0.318,
+		0.3
+	  ]
+	},
+	{
+	  "file_name": "std_geode.glb",
+	  "source_url": "https://drive.google.com/file/d/1n4AZeqk-Y2jDlirA06fIaNQO1rPt31TQ/view?usp=drivesdk",
+	  "version": "v3",
+	  "size_bytes": 9860,
+	  "sha256": "82de19f132756725ef8d940e9ce14595663428fd8b231869e52dc1de5b9f4d31",
+	  "local_extent": [
+		0.26,
+		0.34,
+		0.22
+	  ]
+	},
+	{
+	  "file_name": "std_lute.glb",
+	  "source_url": "https://drive.google.com/file/d/131ts8Oc1UuDRjv3cnY9DDtu32h2Fafu1/view?usp=drivesdk",
+	  "version": "v3",
+	  "size_bytes": 23268,
+	  "sha256": "a4b4bc574fee07b89cc06b8bed108ad3e83e568ea3462608ca044251aa118863",
+	  "local_extent": [
+		0.19,
+		0.35,
+		0.14
+	  ]
+	},
+	{
+	  "file_name": "std_anvil.glb",
+	  "source_url": "https://drive.google.com/file/d/19JRNsSeaSOSQPy49zLJpwc1jUK4XBv34/view?usp=drivesdk",
+	  "version": "v3",
+	  "size_bytes": 9608,
+	  "sha256": "fc341357d58d4606522cf63431b3f228c1b5ea2cbdb7b3ed96e9831cb0d2dfc7",
+	  "local_extent": [
+		0.28,
+		0.23,
+		0.2
+	  ]
+	},
+	{
+	  "file_name": "std_dragon_egg.glb",
+	  "source_url": "https://drive.google.com/file/d/1tqDLVkBKZZSSd3rguYk_4zyIkDEfay5s/view?usp=drivesdk",
+	  "version": "v3",
+	  "size_bytes": 40152,
+	  "sha256": "7cc945ee011d4987e9190c4938cac659ac7944d2a7b6390683bd2d209a153fc2",
+	  "local_extent": [
+		0.19,
+		0.315,
+		0.203
+	  ]
+	},
+	{
+	  "file_name": "std_royal_crown.glb",
+	  "source_url": "https://drive.google.com/file/d/1hfSi0NmJayhQfOTcJofpNTABZk_ayxFH/view?usp=drivesdk",
+	  "version": "v3",
+	  "size_bytes": 76612,
+	  "sha256": "d55374ea1b626036176c3672ae741ee5f3ca6849fcd2000d1ea77120ca48877a",
+	  "local_extent": [
+		0.28,
+		0.26,
+		0.28
+	  ]
+	}
+  ]
+}
