@@ -5,6 +5,36 @@ instructions extracted from design references. Update the relevant facts when
 implementation changes. Use these notes for ordinary questions; inspect the
 specific source again when changes, debugging, or uncertainty require it.
 
+## Purchased furniture grids and sizes — 2026-10-14
+
+User reported artifacts could not be placed on purchased furniture and asked
+to enlarge undersized furniture. Confirmed: real mesh support existed, but
+purchased displays lacked surface-relative placement patches; world-grid snaps
+missed their narrow boards. The floor occupancy check also rejected low shelves.
+
+- furniture_item.gd now caches local horizontal patches and transforms them
+  with the furniture; movement, all quarter-turns and reload keep the grid.
+- Placement centres full cells on the board and prefers the usable broad plane
+  over tiny decorative faces. Floor footprints no longer reserve shelf heights;
+  real support/headroom/other-artifact checks still reject clipping/overhangs.
+- Glass side panels/domes allow access to display contents; opaque frames and
+  horizontal glass shelves retain collision and support. Original art unchanged.
+- FurnitureItem.PROFILES is the shared size source for final models and ghosts.
+  Display shelf 1.80 m / 4x2; open shelf 1.85 m / 4x2; glass counter ~1.04 m / 3x2;
+  weapon rack 1.80 m / 4x2; glass cabinet 1.65 m / 3x2; tall vitrine 1.85 m / 3x2;
+  combination cabinet 1.80 m / 4x2; pedestal/dome 2.00 m / 2x2 unchanged.
+  Updated shop card footprints; showcase prices unchanged.
+- Existing placed furniture updates in memory. Artifacts supported by its old
+  boards follow the uniform resize, retaining artifact scale and ownership.
+  display_sizing_version=1 prevents repeated adjustment after save/reload.
+- Automated native Compatibility checks: furniture_surface_test 327 passing
+  checks (all 8 models x 4 rotations with real camera rays and E placement,
+  occupied cells, oversize rejection and saved-stock migration); placement_test
+  281 passing; menu_scene_test 98 passing. Headless surface checks 263 passing.
+  Visual model gallery inspected beside a 1.85 m customer. Private test profiles;
+  evidence in chat work/furniture-grid-fix-2026-10-14. Real save/settings untouched.
+  Preserve the user's current main.tscn lighting, shop and rubbish-marker edits.
+
 ## Classroom showcase tuning — 2026-10-14
 
 Latest accepted user decisions supersede earlier Day 1 and economy notes:

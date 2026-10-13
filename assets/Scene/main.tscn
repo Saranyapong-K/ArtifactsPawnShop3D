@@ -22,9 +22,11 @@ radiance_size = 2
 [sub_resource type="Environment" id="Environment_x3d4q"]
 sky = SubResource("Sky_autumn")
 ambient_light_source = 2
-ambient_light_color = Color(0.92732453, 0.87752014, 0.9670108, 1)
+ambient_light_color = Color(0.5482993, 0.51088446, 0.75337106, 1)
+ambient_light_energy = 0.6
 reflected_light_source = 2
 tonemap_mode = 2
+tonemap_exposure = 0.78
 glow_enabled = true
 glow_intensity = 0.8
 fog_enabled = true
@@ -40,7 +42,7 @@ adjustment_saturation = 1.15
 [node name="World" parent="." unique_id=2089957838 instance=ExtResource("1_wrrei")]
 
 [node name="Shop" parent="." unique_id=1894779026 instance=ExtResource("1_mykv4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4142778, -0.048514843, -2.0666895)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.41625762, -0.063580275, -2.0500493)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1202953053]
 environment = SubResource("Environment_x3d4q")
@@ -157,10 +159,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.515821, 0, 5.3739805)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8703046, 0, 1.7764518)
 
 [node name="TrashDrink" type="Marker3D" parent="Marks/trashs" unique_id=27766418]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8939953, 0, 3.9126954)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.8939953, -0.15006414, 3.9126954)
 
 [node name="TrashDrink2" type="Marker3D" parent="Marks/trashs" unique_id=1174730209]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7556205, 0, 3.9126954)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7556205, -0.15006414, 3.9126954)
 
 [node name="TrashSpot4" type="Marker3D" parent="Marks/trashs" unique_id=879376830]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6565504, 0, 6.4829526)

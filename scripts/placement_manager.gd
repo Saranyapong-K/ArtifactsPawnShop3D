@@ -67,6 +67,7 @@ func spawn_furniture(record: Dictionary, default_position: Vector3) -> Node3D:
 	else:
 		item.global_position = _find_free_spot(default_position, item.artifact, id)
 		_record(item, 0, "floor")
+	item.adapt_legacy_contents(GameState.inventory, items)
 	return item
 
 func restore_furniture(default_position: Vector3 = Vector3(1.6, 0.1, 1.6)) -> void:
@@ -92,7 +93,7 @@ func pick_up(item: Node3D) -> void:
 	item.artifact.placement["held"] = true
 	_sync_record(item)
 	var furniture: bool = item.get_meta("is_furniture", false)
-	ghost = ArtifactVisual.create(item.artifact, 2.0 if furniture else 0.8, 1.0 if furniture else 0.84, false)
+	ghost = FurnitureItemScript.create_visual(item.artifact) if furniture else ArtifactVisual.create(item.artifact, 0.8, 0.84, false)
 	add_child(ghost)
 	footprint_mesh = MeshInstance3D.new()
 	var mesh := BoxMesh.new()
@@ -157,15 +158,22 @@ func resolve_candidate(artifact: ArtifactData,hit: Vector3,rotation: int,exclude
 	var anchor := Vector2.ZERO
 	var patch := Rect2()
 	var node := collider
+	var surfaces: Array = []
 	while node:
-		if node.has_meta("placement_patches"):
-			for surface in node.get_meta("placement_patches"):
-				var rect: Rect2=surface.rect
-				if absf(float(surface.y)-hit.y)<0.04 and rect.grow(0.015).has_point(Vector2(hit.x,hit.z)) and (patch.size==Vector2.ZERO or rect.get_area()<patch.get_area()): patch=rect
+		if node.has_method("get_placement_patches"):
+			surfaces = node.get_placement_patches()
+			break
+		elif node.has_meta("placement_patches"):
+			surfaces = node.get_meta("placement_patches")
 			break
 		node=node.get_parent()
+	for surface: Dictionary in surfaces:
+		var rect: Rect2=surface.rect
+		if absf(float(surface.y)-hit.y)<0.04 and rect.grow(0.015).has_point(Vector2(hit.x,hit.z)) and (patch.size==Vector2.ZERO or rect.get_area()>patch.get_area()): patch=rect
 	if patch.size!=Vector2.ZERO:
-		anchor=patch.position+Vector2(size)*CELL*0.5
+		# Centre complete cells on the usable board, rather than against one edge.
+		var cells := ((patch.size + Vector2.ONE * 0.07) / CELL).floor().max(Vector2(size))
+		anchor=patch.get_center()-cells*CELL*0.5+Vector2(size)*CELL*0.5
 	var point:=Vector2(hit.x,hit.z)
 	var snapped:=anchor+((point-anchor)/CELL).round()*CELL
 	var candidates: Array[Vector3]=[]
@@ -193,6 +201,9 @@ func can_place(artifact: ArtifactData, position: Vector3, rotation: int, exclude
 			continue
 		var other: Node3D = items[id]
 		if not is_instance_valid(other) or not other.artifact.placement.get("placed", true):
+			continue
+		# The cabinet reserves floor cells; its actual boards support artifacts.
+		if not furniture and other.get_meta("is_furniture", false) and position.y > other.global_position.y + 0.04:
 			continue
 		if absf(other.global_position.y - position.y) > 0.35:
 			continue

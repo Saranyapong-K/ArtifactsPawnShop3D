@@ -238,6 +238,7 @@ text = "Display shelf"
 
 [node name="Description" parent="Scroll/Catalog/Furniture/DisplayShelf" index="2"]
 anchors_preset = -1
+text = "4 × 2 floor cells"
 
 [node name="Price" parent="Scroll/Catalog/Furniture/DisplayShelf" index="3"]
 anchors_preset = -1
@@ -259,6 +260,7 @@ text = "Open shelf"
 
 [node name="Description" parent="Scroll/Catalog/Furniture/OpenShelf" index="2"]
 anchors_preset = -1
+text = "4 × 2 floor cells"
 
 [node name="Price" parent="Scroll/Catalog/Furniture/OpenShelf" index="3"]
 anchors_preset = -1
@@ -304,6 +306,7 @@ text = "Weapon rack"
 
 [node name="Description" parent="Scroll/Catalog/Furniture/WeaponRack" index="2"]
 anchors_preset = -1
+text = "4 × 2 floor cells"
 
 [node name="Price" parent="Scroll/Catalog/Furniture/WeaponRack" index="3"]
 anchors_preset = -1
@@ -326,7 +329,7 @@ text = "Glass cabinet"
 
 [node name="Description" parent="Scroll/Catalog/Furniture/GlassCabinet" index="2"]
 anchors_preset = -1
-text = "2 × 2 floor cells"
+text = "3 × 2 floor cells"
 
 [node name="Price" parent="Scroll/Catalog/Furniture/GlassCabinet" index="3"]
 anchors_preset = -1
@@ -349,7 +352,7 @@ text = "Tall vitrine"
 
 [node name="Description" parent="Scroll/Catalog/Furniture/TallVitrine" index="2"]
 anchors_preset = -1
-text = "2 × 2 floor cells"
+text = "3 × 2 floor cells"
 
 [node name="Price" parent="Scroll/Catalog/Furniture/TallVitrine" index="3"]
 anchors_preset = -1
@@ -372,7 +375,7 @@ text = "Combination cabinet"
 
 [node name="Description" parent="Scroll/Catalog/Furniture/CombinationCabinet" index="2"]
 anchors_preset = -1
-text = "3 × 2 floor cells"
+text = "4 × 2 floor cells"
 
 [node name="Price" parent="Scroll/Catalog/Furniture/CombinationCabinet" index="3"]
 anchors_preset = -1

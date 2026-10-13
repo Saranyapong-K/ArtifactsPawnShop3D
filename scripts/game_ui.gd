@@ -35,13 +35,13 @@ const EQUIPMENT := [
 	{"id":"roomba", "name":"Roomba", "price":250, "description":"Cleans every mess automatically · 20 seconds each"},
 ]
 const FURNITURE := [
-	{"id":"furn_shelf", "name":"Display shelf", "price":200, "grid":[3,1]},
-	{"id":"cab_open_shelf", "name":"Open shelf", "price":250, "grid":[3,1]},
+	{"id":"furn_shelf", "name":"Display shelf", "price":200, "grid":[4,2]},
+	{"id":"cab_open_shelf", "name":"Open shelf", "price":250, "grid":[4,2]},
 	{"id":"cab_counter_glass", "name":"Glass display counter", "price":350, "grid":[3,2]},
-	{"id":"cab_weapon_rack", "name":"Weapon rack", "price":500, "grid":[3,1]},
-	{"id":"furn_glass_cabinet", "name":"Glass cabinet", "price":400, "grid":[2,2]},
-	{"id":"cab_tall_vitrine", "name":"Tall vitrine", "price":450, "grid":[2,2]},
-	{"id":"cab_combo", "name":"Combination cabinet", "price":500, "grid":[3,2]},
+	{"id":"cab_weapon_rack", "name":"Weapon rack", "price":500, "grid":[4,2]},
+	{"id":"furn_glass_cabinet", "name":"Glass cabinet", "price":400, "grid":[3,2]},
+	{"id":"cab_tall_vitrine", "name":"Tall vitrine", "price":450, "grid":[3,2]},
+	{"id":"cab_combo", "name":"Combination cabinet", "price":500, "grid":[4,2]},
 	{"id":"cab_pedestal_dome", "name":"Display pedestal", "price":500, "grid":[2,2]},
 ]
 
