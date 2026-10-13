@@ -30,6 +30,19 @@ Latest accepted user decisions supersede earlier Day 1 and economy notes:
   and dialogue lifecycle; menu_scene_test passed 98 checks. Both used isolated
   profiles. Clean Web export succeeded. Earlier economy/gameplay tests with
   200 G or Common-only Day 1 assumptions predate these accepted changes.
+- Browser QA on the compressed production build verified 1,000 G in Management,
+  new shop prices, menu audio signal, pointer capture and zero captured runtime
+  errors. The initial browser probe clicked before engine startup; requiring
+  removal of Godot's loading overlay fixed the probe, and the rerun passed.
+- Showcase game commit: 8f9afca0ea1ca1951495f1b75ec02340ae55972c, pushed to main.
+  Public Site version 4 published successfully with source commit
+  2eba54993ad8ce9e4731bde4148b255a4cf7f110 and deployment
+  appgdep_6acebb38f8e08191bc828ad8a49068bb. Existing gameplay URL unchanged.
+  Evidence: chat work/showcase-tuning-2026-10-14. Real profile hashes unchanged;
+  original user editor PID 16916 remained running.
+- Anonymous published-site Chrome check also passed: expected game commit,
+  menu audio signal, New Game, pointer capture, Management and shop rendering;
+  zero captured runtime errors. Menu loaded in about 4.4 seconds on this setup.
 
 ## Published playtest fixes — 1.0.0-rc2, 2026-10-14
 
