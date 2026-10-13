@@ -15,7 +15,7 @@ static func build(count: int = 5, day_number: int = 1) -> Array[Haggle]:
 	var queue: Array[Haggle] = []
 	var catalog := _catalog()
 	if day_number <= 1:
-		# Three opening asks fit together inside the 200 G starting wallet.
+		# Affordable introductions; the second seller still offers the 20 G broom.
 		catalog.shuffle()
 		catalog = _for_rarity(catalog, "Common")
 		for i in 3:
@@ -24,7 +24,7 @@ static func build(count: int = 5, day_number: int = 1) -> Array[Haggle]:
 				continue
 			var tier := "Common" if i < 2 else "Uncommon"
 			var item := _artifact(catalog[i % catalog.size()], tier, "normal")
-			queue.append(Haggle.new([25, 20, 100][i], false, "easygoing", item))
+			queue.append(Haggle.new([50, 20, 200][i], false, "easygoing", item))
 		return queue
 	count = maxi(1, count)
 	for i in count:
@@ -52,9 +52,7 @@ static func broom_offer() -> Haggle:
 
 static func walk_in(day_number: int) -> Haggle:
 	# Generate independently: exhausting the opening queue must not end the day.
-	# Day 1's opening queue supplies its one Uncommon offer. Later walk-ins
-	# stay Common so the first-day supply cannot add more Uncommon artifacts.
-	var rarity := "Common" if day_number <= 1 else _roll_rarity(day_number)
+	var rarity := _roll_rarity(day_number)
 	var item := _artifact(_for_rarity(_catalog(), rarity).pick_random(), rarity, _roll_status(rarity))
 	var prices := item.price_range()
 	var reference := randi_range(prices.x, prices.x + (prices.y - prices.x) / 3)
@@ -93,13 +91,13 @@ static func _artifact(entry: Dictionary, rarity: String, status: String) -> Arti
 	return ArtifactData.create(String(entry.get("model_path", "res://assets/Relics/Goldcoin.glb")), String(entry.get("name", "Artifact")), rarity, status, grid)
 
 
-static func _roll_rarity(day_number: int) -> String:
+static func _roll_rarity(_day_number: int) -> String:
 	var roll := randf()
-	if day_number >= 5 and roll < 0.03:
+	if roll < 0.03:
 		return "SSR"
-	if day_number >= 4 and roll < 0.10:
+	if roll < 0.10:
 		return "SR"
-	if day_number >= 3 and roll < 0.25:
+	if roll < 0.25:
 		return "Rare"
 	return "Common" if roll < 0.65 else "Uncommon"
 

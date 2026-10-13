@@ -5,6 +5,32 @@ instructions extracted from design references. Update the relevant facts when
 implementation changes. Use these notes for ordinary questions; inspect the
 specific source again when changes, debugging, or uncertainty require it.
 
+## Classroom showcase tuning — 2026-10-14
+
+Latest accepted user decisions supersede earlier Day 1 and economy notes:
+- New Game starts at 1,000 G. Loaded saves retain their actual wallet.
+- Customer arrival interval is 18–28 real seconds (previously 28–45), with
+  the same first arrival and bounded crowd/queue.
+- Common range is 20–100 G; Uncommon is 102–600 G (both doubled).
+  Listing caps remain 120% of tier maximum. Opening references are 50/200 G;
+  the second seller's broom remains exactly 20 G.
+- All five rarities can appear on Day 1 after the three introductory sellers.
+  Random weights are Common 40%, Uncommon 35%, Rare 15%, SR 7%, SSR 3%.
+  Higher tier prices and hidden statuses are unchanged. All catalog models
+  are warmed before Day 1, including the fixed Rare IP17.
+- Magnifier 359 G unchanged; curse detector 400 G; Roomba 250 G; clock 350 G;
+  radio 200 G. Furniture is 200/250/350/500/400/450/500/500 G in catalog order.
+  Standalone shop cards match runtime prices.
+- Dialogue reveals play short, soft synth chatter based on the existing
+  ambience notes; throttled to at most one blip per 65 ms, silent when paused,
+  skipped, hidden or finished. Existing six songs/radio controls remain.
+- Preserve the user's current environment/scene edits and real profile.
+- Validation: showcase_tuning_test passed 30 checks against the actual main
+  scene, real upgrade purchase handlers, seeded Day 1 walk-ins, save loading
+  and dialogue lifecycle; menu_scene_test passed 98 checks. Both used isolated
+  profiles. Clean Web export succeeded. Earlier economy/gameplay tests with
+  200 G or Common-only Day 1 assumptions predate these accepted changes.
+
 ## Published playtest fixes — 1.0.0-rc2, 2026-10-14
 
 The user explicitly authorized fixing the release plan, updating their GitHub

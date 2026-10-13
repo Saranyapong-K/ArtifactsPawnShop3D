@@ -29,20 +29,20 @@ const CONTROL_HINT := "WASD Move  •  E Interact  •  I Stock  •  B Shop  �
 
 const EQUIPMENT := [
 	{"id":"magnifier", "name":"Magnifying glass", "price":359, "description":"Find hidden damage"},
-	{"id":"curse_detector", "name":"Curse detector", "price":1000, "description":"Reveal hidden curses"},
+	{"id":"curse_detector", "name":"Curse detector", "price":400, "description":"Reveal hidden curses"},
 	{"id":"clock", "name":"Clock", "price":350, "description":"Tell the time"},
 	{"id":"radio", "name":"Radio", "price":200, "description":"Play shop music"},
-	{"id":"roomba", "name":"Roomba", "price":2500, "description":"Cleans every mess automatically · 20 seconds each"},
+	{"id":"roomba", "name":"Roomba", "price":250, "description":"Cleans every mess automatically · 20 seconds each"},
 ]
 const FURNITURE := [
 	{"id":"furn_shelf", "name":"Display shelf", "price":200, "grid":[3,1]},
 	{"id":"cab_open_shelf", "name":"Open shelf", "price":250, "grid":[3,1]},
 	{"id":"cab_counter_glass", "name":"Glass display counter", "price":350, "grid":[3,2]},
 	{"id":"cab_weapon_rack", "name":"Weapon rack", "price":500, "grid":[3,1]},
-	{"id":"furn_glass_cabinet", "name":"Glass cabinet", "price":650, "grid":[2,2]},
-	{"id":"cab_tall_vitrine", "name":"Tall vitrine", "price":750, "grid":[2,2]},
-	{"id":"cab_combo", "name":"Combination cabinet", "price":900, "grid":[3,2]},
-	{"id":"cab_pedestal_dome", "name":"Display pedestal", "price":1200, "grid":[2,2]},
+	{"id":"furn_glass_cabinet", "name":"Glass cabinet", "price":400, "grid":[2,2]},
+	{"id":"cab_tall_vitrine", "name":"Tall vitrine", "price":450, "grid":[2,2]},
+	{"id":"cab_combo", "name":"Combination cabinet", "price":500, "grid":[3,2]},
+	{"id":"cab_pedestal_dome", "name":"Display pedestal", "price":500, "grid":[2,2]},
 ]
 
 func _ready() -> void:

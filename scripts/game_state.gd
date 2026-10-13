@@ -9,7 +9,7 @@ signal hallucination_started
 
 const SAVE_PATH := "user://save_v2.json"
 const SAVE_VERSION := 2
-const START_MONEY := 200
+const START_MONEY := 1000
 const WAKE_TIME := 10 * 60 + 30
 const RENT := 800
 const RENT_INTERVAL := 5

@@ -5,7 +5,7 @@ const Appearance = preload("res://scripts/customer_appearance.gd")
 @export var max_queue := 3
 @export_range(0,1) var leave_chance := 0.25
 @export var browse_pause := Vector2(2.5,5.0)
-@export var arrival_interval := Vector2(28.0,45.0)
+@export var arrival_interval := Vector2(18.0,28.0)
 var manager: Node
 var visitors: Array[Node3D] = []
 var waiting_visitors: Array[Node3D] = []

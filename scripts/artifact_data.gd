@@ -3,7 +3,7 @@ extends RefCounted
 ## Persistent information for one artifact. Cost is its actual purchase price.
 
 const RARITY_RANGES := {
-	"Common": Vector2i(10, 50), "Uncommon": Vector2i(51, 300),
+	"Common": Vector2i(20, 100), "Uncommon": Vector2i(102, 600),
 	"Rare": Vector2i(301, 1000), "SR": Vector2i(1000, 3000),
 	"SSR": Vector2i(3000, 20000),
 }

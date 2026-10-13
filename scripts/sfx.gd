@@ -52,7 +52,7 @@ func play(cue_name: String, pitch: float = 1.0) -> void:
 	if not _cues.has(cue) or _voices.is_empty():
 		return
 	var now := Time.get_ticks_msec()
-	var gap := 220 if cue == "footstep" else 35
+	var gap := 220 if cue == "footstep" else (65 if cue == "talk" else 35)
 	if now - int(_last_played.get(cue, -1000)) < gap:
 		return
 	_last_played[cue] = now
@@ -146,6 +146,7 @@ func _build_cues() -> void:
 		"reveal": _tone([523.25, 659.25, 783.99, 1046.5], 0.10, 0.24),
 		"catch": _tone([392.0, 523.25, 659.25], 0.07, 0.25),
 		"clean": _tone([392.0, 493.88, 587.33], 0.09, 0.14),
+		"talk": _tone([329.63, 392.0], 0.025, 0.13),
 	}
 	for cue in _cues:
 		var path := "res://assets/Audio/%s.ogg" % cue

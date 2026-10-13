@@ -142,7 +142,7 @@ text = "Reveal hidden curses"
 
 [node name="Price" parent="Scroll/Catalog/Equipment/CurseDetector" index="3"]
 anchors_preset = -1
-text = "1000 G"
+text = "400 G"
 
 [node name="BuyButton" parent="Scroll/Catalog/Equipment/CurseDetector" index="4"]
 anchors_preset = -1
@@ -206,7 +206,7 @@ text = "Roomba"
 text = "Cleans every mess automatically · 20 seconds each"
 
 [node name="Price" parent="Scroll/Catalog/Equipment/Roomba" index="3"]
-text = "2500 G"
+text = "250 G"
 
 [node name="FurnitureHeading" type="Label" parent="Scroll/Catalog" unique_id=574532265]
 unique_name_in_owner = true
@@ -330,7 +330,7 @@ text = "2 × 2 floor cells"
 
 [node name="Price" parent="Scroll/Catalog/Furniture/GlassCabinet" index="3"]
 anchors_preset = -1
-text = "650 G"
+text = "400 G"
 
 [node name="BuyButton" parent="Scroll/Catalog/Furniture/GlassCabinet" index="4"]
 anchors_preset = -1
@@ -353,7 +353,7 @@ text = "2 × 2 floor cells"
 
 [node name="Price" parent="Scroll/Catalog/Furniture/TallVitrine" index="3"]
 anchors_preset = -1
-text = "750 G"
+text = "450 G"
 
 [node name="BuyButton" parent="Scroll/Catalog/Furniture/TallVitrine" index="4"]
 anchors_preset = -1
@@ -376,7 +376,7 @@ text = "3 × 2 floor cells"
 
 [node name="Price" parent="Scroll/Catalog/Furniture/CombinationCabinet" index="3"]
 anchors_preset = -1
-text = "900 G"
+text = "500 G"
 
 [node name="BuyButton" parent="Scroll/Catalog/Furniture/CombinationCabinet" index="4"]
 anchors_preset = -1
@@ -399,7 +399,7 @@ text = "2 × 2 floor cells"
 
 [node name="Price" parent="Scroll/Catalog/Furniture/Pedestal" index="3"]
 anchors_preset = -1
-text = "1200 G"
+text = "500 G"
 
 [node name="BuyButton" parent="Scroll/Catalog/Furniture/Pedestal" index="4"]
 anchors_preset = -1

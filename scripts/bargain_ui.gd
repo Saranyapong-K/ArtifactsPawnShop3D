@@ -193,10 +193,19 @@ func say(text: String) -> void:
 	_dlg_started_ms = Time.get_ticks_msec()
 
 	var shown := 0.0
+	var last_spoken := -1
+	var chatter := get_node_or_null("/root/Sfx")
 	while _dlg_typing and _dlg_active and token == _dialogue_epoch:
 		await get_tree().process_frame
+		if not _dlg_typing or not _dlg_active or token != _dialogue_epoch: break
+		if get_tree().paused: continue
 		shown += get_process_delta_time() * DIALOGUE_CPS
 		_dlg_label.visible_characters = int(shown)
+		var character := mini(int(shown), text.length()) - 1
+		if character > last_spoken:
+			last_spoken = character
+			if chatter and text.substr(character, 1).strip_edges() != "":
+				chatter.play("talk", randf_range(0.9, 1.15))
 		if shown >= text.length():
 			_dlg_typing = false
 	if token != _dialogue_epoch or not _dlg_active: return

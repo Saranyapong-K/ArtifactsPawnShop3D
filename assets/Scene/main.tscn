@@ -22,15 +22,14 @@ radiance_size = 2
 [sub_resource type="Environment" id="Environment_x3d4q"]
 sky = SubResource("Sky_autumn")
 ambient_light_source = 2
-ambient_light_color = Color(0.6648514, 0.6263983, 0.6442886, 1)
-ambient_light_energy = 0.65
+ambient_light_color = Color(0.92732453, 0.87752014, 0.9670108, 1)
 reflected_light_source = 2
 tonemap_mode = 2
 glow_enabled = true
 glow_intensity = 0.8
 fog_enabled = true
 fog_mode = 1
-fog_light_color = Color(0.84, 0.77, 0.66, 1)
+fog_light_color = Color(0.69659555, 0.735471, 0.625462, 1)
 fog_density = 0.015
 adjustment_enabled = true
 adjustment_contrast = 1.1

@@ -23,8 +23,8 @@ enum Phase { FREE, ARRIVING, WAITING, INTRO, HAGGLING, RECEIPT, SUMMARY, BUSY, C
 @export var customer_scenes: Array[PackedScene] = []
 @export var radio_songs: Array[AudioStream] = []
 @export var relic_scenes: Array[PackedScene] = [] # Retained for the existing scene; catalog supplies identities.
-@export var min_arrival_delay: float = 28.0
-@export var max_arrival_delay: float = 45.0
+@export var min_arrival_delay: float = 18.0
+@export var max_arrival_delay: float = 28.0
 @export var first_customer_delay: float = 3.0
 @export var happy_texture: Texture2D
 @export var thief_model: PackedScene

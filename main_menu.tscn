@@ -478,7 +478,6 @@ visible = false
 layout_mode = 1
 
 [node name="SettingsMenu" parent="." unique_id=1873773150 instance=ExtResource("5_dy7ct")]
-visible = false
 pause_when_open = false
 
 [node name="MusicTicker" type="Control" parent="." unique_id=826107901]
@@ -508,4 +507,3 @@ theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 21
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=535002277]
-bus = &"Music"

@@ -21,7 +21,6 @@ func prepare(day: int) -> void:
 	var paths: Array[String] = ["res://assets/Scene/main.tscn", "res://assets/Customers/NPCS1.glb", "res://assets/Customers/NPCS2.glb", "res://assets/Customers/NPCS3.glb", "res://assets/Customers/GoblinPolice.glb", "res://assets/Customers/Goblin.glb"]
 	var entries:=DayQueue._catalog()
 	for entry: Dictionary in entries:
-		if day<=1 and String(entry.get("rarity","Common")) not in ["Common","Uncommon"]: continue
 		var path:=String(entry.model_path)
 		if not paths.has(path): paths.append(path)
 	var stage := SubViewport.new()
