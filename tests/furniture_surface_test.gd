@@ -6,6 +6,7 @@ var failures := 0
 var world: Node3D
 var placement: Node3D
 var camera: Camera3D
+var player: CharacterBody3D
 var state: Node
 
 func _init(): run.call_deferred()
@@ -21,6 +22,9 @@ func make_world():
 	var shape := CollisionShape3D.new(); var box := BoxShape3D.new()
 	box.size = Vector3(40,0.2,40); shape.shape=box; shape.position.y=-0.1; floor_body.add_child(shape)
 	placement = load("res://scripts/placement_manager.gd").new(); world.add_child(placement)
+	player=load("res://assets/Scene/player.tscn").instantiate(); world.add_child(player)
+	player.set_physics_process(false); player.collision_layer=0; player.collision_mask=0
+	placement.player=player
 	camera = Camera3D.new(); world.add_child(camera); camera.current=true
 
 func run():
@@ -80,6 +84,13 @@ func run():
 				relic.global_position=target; placement._record(relic,0,str(item.get_path()))
 			check(not placement.can_place(artifact,relic.global_position,0), "Occupied display cell rejects overlap")
 			check(placement._has_displayed_artifacts(item), "Occupied furniture is protected from pickup")
+			if input_supported:
+				player.camera.global_transform=camera.global_transform
+				player.camera.look_at(relic.get_node("InteractionCollision").global_position)
+				await settle()
+				player._try_interact()
+				check(placement.held==relic, "Player E ray retrieves the artifact through the furniture interaction area")
+				placement.cancel_placement()
 			state.remove_artifact(artifact.id); await settle()
 		state.furniture.clear(); state.changed.emit(); await settle()
 	await legacy_roundtrip()

@@ -171,6 +171,7 @@ func get_interaction_target(force: bool = false) -> Node:
 		return null
 	# Find the first node (collider or its parents) that has an interact() function
 	var target := ray.get_collider() as Node
+	var interaction_excludes: Array[RID] = [get_rid()]
 	# Dust areas sit over display surfaces. Without the duster, prefer a book or
 	# artifact directly underneath; the same resolved target drives its prompt.
 	if target and target is Area3D and target.get_script() and target.get_script().resource_path == "res://scripts/cleaning_target.gd" and target.kind == "dust":
@@ -178,11 +179,22 @@ func get_interaction_target(force: bool = false) -> Node:
 		if cleaner and cleaner.held_tool != "feather_duster":
 			var query := PhysicsRayQueryParameters3D.create(camera.global_position, camera.global_position - camera.global_basis.z * reach)
 			query.collide_with_areas = true
-			query.exclude = [get_rid(), target.get_rid()]
+			interaction_excludes.append(target.get_rid())
+			query.exclude = interaction_excludes
 			var hit := get_world_3d().direct_space_state.intersect_ray(query)
 			var behind: Node = hit.get("collider")
 			while behind and not behind.has_method("interact"): behind = behind.get_parent()
 			if behind: target = behind
+	# The broad furniture pickup area must not hide an artifact on its shelves.
+	if target is Area3D and target.get_parent().get_meta("is_furniture", false):
+		interaction_excludes.append(target.get_rid())
+		var query := PhysicsRayQueryParameters3D.create(camera.global_position, camera.global_position-camera.global_basis.z*reach)
+		query.collide_with_areas = true
+		query.exclude = interaction_excludes
+		var hit := get_world_3d().direct_space_state.intersect_ray(query)
+		var behind: Node = hit.get("collider")
+		while behind and not behind.has_method("interact"): behind = behind.get_parent()
+		if behind and behind.has_method("setup_artifact"): target = behind
 	while target and not target.has_method("interact"):
 		target = target.get_parent()
 	_interaction_target = target
